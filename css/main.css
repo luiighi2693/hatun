@@ -1160,8 +1160,8 @@ h1.intro-header::before {
   border: none;
   width: 97px;
   height: 22px;
-  background: url("../images/logo.png") no-repeat center;
-  background-size: 97px 22px;
+  background: url("../images/hatun/logo.png") no-repeat center;
+  background-size: 97px 60px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -1331,7 +1331,7 @@ h1.intro-header::before {
   .header-logo a {
     width: 88px;
     height: 20px;
-    background-size: 88px 20px;
+    background-size: 88px 50px;
   }
   #header-nav-wrap {
     display: none;
@@ -2866,5 +2866,38 @@ footer ul a:visited {
   }
 }
 
+.hatunFont{
+  color: #fcdc00 !important;
+  font-family: DIN-light, serif;
+}
 
+.hatunFontSlogan{
+  color: #fcdc00 !important;
+  font-family: JennaSue, serif;
+}
+
+.hatunFontSize{
+  font-size: 9em;
+}
+
+@media (max-width: 600px) {
+  .hatunFontSize{
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 360px) {
+  .hatunFontSize{
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 500px) {
+  #header{
+    height: 40px !important;
+  }
+  .header-menu-toggle{
+    top: 0 !important;
+  }
+}
 /*# sourceMappingURL=main.css.map */

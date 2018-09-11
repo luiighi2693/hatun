@@ -5,11 +5,8 @@
 <html class="no-js" lang="en">
 <!--<![endif]-->
 
-
-<!-- Mirrored from demos.onepagelove.com/html/dazzle/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Aug 2018 01:47:49 GMT -->
 <head>
 
-<!-- OPL Demos Google Analytics -->
 <script>
     // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,10 +17,8 @@
 </script>
 
 
-    <!--- basic page needs
-   ================================================== -->
     <meta charset="utf-8">
-    <title>Dazzle</title>
+    <title>Hatun</title>
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content="">
     <meta name="author" content="">
@@ -60,17 +55,16 @@
 	        <a href="index.html">Hatun</a>
 	    </div>
 
-	   	<nav id="header-nav-wrap">
-			<ul class="header-main-nav">
-				<li><a href="index.html" title="home">INICIO</a></li>
-                <li class="current"><a href="#" title="about">MARCAS</a></li>
-				<li><a href="#pricing" title="pricing">TESTIMONIOS</a></li>
-				<li><a href="#testimonials" title="testimonials">CRÉDITOS</a></li>
-				<li><a href="#download" title="download">TRABAJA CON NOSOTROS</a></li>
-			</ul>
-
-            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-		</nav>
+       <nav id="header-nav-wrap">
+           <ul class="header-main-nav">
+               <li><a class="hatunFont" href="index.html" title="home">INICIO</a></li>
+               <li class="current"><a href="#" title="Marks" class="smoothscroll hatunFont">MARCAS</a></li>
+               <li><a class="smoothscroll hatunFont"  href="#pricing" title="pricing">TESTIMONIOS</a></li>
+               <li><a class="smoothscroll hatunFont"  href="#testimonials" title="testimonials">CRÉDITOS</a></li>
+               <li><a class="smoothscroll hatunFont"  href="#download" title="download">TRABAJA CON NOSOTROS</a></li>
+           </ul>
+           <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
+       </nav>
 
 		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
    	
@@ -79,6 +73,9 @@
     <section id="marks" style="background-color: black;">
         <div>
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol_1.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage1" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatuncasa.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage2" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunmoto.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage3" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
             <map name="m_marcas_hatunsolImage" id="m_marcas_hatunsolImage">
                 <area id="marcas_hatunsolAreaA" shape="poly" coords="454,264,6,526,454,790" title="History" alt="History" />
                 <area id="marcas_hatunsolAreaB" shape="poly" coords="491,305,493,824,928,571" href="javascript:;" alt="" />
@@ -104,10 +101,12 @@
                     window.location = 'index.html';
                 })
                 .mouseenter(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1b.jpg');
+                    $('#marcas_hatunsolImage1').css('display', 'block');
+                    $('#marcas_hatunsolImage').css('display', 'none');
                 })
                 .mouseleave(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
+                    $('#marcas_hatunsolImage').css('display', 'block');
+                    $('#marcas_hatunsolImage1').css('display', 'none');
                 });
 
             $('#marcas_hatunsolAreaB')
@@ -115,10 +114,12 @@
                     window.location = 'index.html';
                 })
                 .mouseenter(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1c.jpg');
+                    $('#marcas_hatunsolImage2').css('display', 'block');
+                    $('#marcas_hatunsolImage').css('display', 'none');
                 })
                 .mouseleave(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
+                    $('#marcas_hatunsolImage').css('display', 'block');
+                    $('#marcas_hatunsolImage2').css('display', 'none');
                 });
 
             $('#marcas_hatunsolAreaC')
@@ -126,35 +127,13 @@
                     window.location = 'index.html';
                 })
                 .mouseenter(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1d.jpg');
+                    $('#marcas_hatunsolImage3').css('display', 'block');
+                    $('#marcas_hatunsolImage').css('display', 'none');
                 })
                 .mouseleave(function() {
-                    $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
+                    $('#marcas_hatunsolImage').css('display', 'block');
+                    $('#marcas_hatunsolImage3').css('display', 'none');
                 });
-
-            // $('#marcas_hatunsolAreaA')
-            //     .mouseenter(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1b.jpg');
-            //     })
-            //     .mouseleave(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
-            //     });
-
-            // $('#marcas_hatunsolAreaB')
-            //     .mouseenter(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1c.jpg');
-            //     })
-            //     .mouseleave(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
-            //     });
-
-            // $('#marcas_hatunsolAreaC')
-            //     .mouseenter(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1d.jpg');
-            //     })
-            //     .mouseleave(function() {
-            //         $('#marcas_hatunsolImage').attr('src', 'images/hatun/marcas_hatunsol_1.jpg');
-            //     });
         });
     </script>
     <script src="js/plugins.js"></script>
