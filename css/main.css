@@ -2900,4 +2900,40 @@ footer ul a:visited {
     top: 0 !important;
   }
 }
+
+video {
+  width:100%;
+  /*max-width:500px;*/
+  height:100%;
+}
+
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  z-index: 502;
+  overflow: hidden;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: black;
+  margin: 0; /* 15% from the top and centered */
+  padding: 0;
+  width: 100%; /* Could be more or less, depending on screen size */
+  height: 100%;
+}
+
+.hatunVideoButton {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 /*# sourceMappingURL=main.css.map */
