@@ -2624,10 +2624,10 @@ footer ul a:visited {
   padding: 0;
   outline: 0;
   border: none;
-  width: 93px;
-  height: 21px;
-  background: url("../images/logo.png") no-repeat center;
-  background-size: 93px 21px;
+  width: 150px;
+  height: 70px;
+  background: url("../images/hatun/logo.png") no-repeat center;
+  background-size: 100% 100%;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -2931,7 +2931,7 @@ video {
 
 .hatunVideoButton {
   position: absolute;
-  top: 60%;
+  top: 90%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);

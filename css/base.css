@@ -538,6 +538,17 @@ textarea {
   .md-full {
     width: 100%;
   }
+
+  .hatunFont {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 970px) {
+  .footer-logo {
+    width: 100px !important;
+    height: 60px !important;
+  }
 }
 
 
