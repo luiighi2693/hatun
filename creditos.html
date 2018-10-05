@@ -153,7 +153,10 @@
 
         });
 
-
+        function goToHome() {
+            localStorage.setItem("goHome", "true");
+            window.location = 'index.html'
+        }
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
