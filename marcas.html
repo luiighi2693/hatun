@@ -51,14 +51,16 @@
    ================================================== -->
    <header id="header" class="row" style="max-width: 100% !important;">
 
-       <a href="index.html"><h1 class="hatunFont" style="line-height: 2.40; margin-left: 2%;">HATUN</h1></a>
+       <div class="header-logo">
+           <a href="index.html"></a>
+       </div>
 
        <nav id="header-nav-wrap">
            <ul class="header-main-nav">
-               <li><a class="hatunFont" href="index.html" title="home">INICIO</a></li>
+               <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="current"><a href="#" title="Marks" class="smoothscroll hatunFont">MARCAS</a></li>
-               <li><a class="smoothscroll hatunFont"  href="#pricing" title="pricing">TESTIMONIOS</a></li>
-               <li><a class="smoothscroll hatunFont"  href="#testimonials" title="testimonials">CRÉDITOS</a></li>
+               <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
+               <li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
                <li><a class="smoothscroll hatunFont"  href="#download" title="download">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
@@ -75,7 +77,7 @@
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatuncasa.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage2" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunmoto.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage3" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
             <map name="m_marcas_hatunsolImage" id="m_marcas_hatunsolImage">
-                <area id="marcas_hatunsolAreaA" shape="poly" coords="454,264,6,526,454,790" title="History" alt="History" />
+                <area id="marcas_hatunsolAreaA" shape="poly" coords="454,264,6,526,454,790" href="javascript:;" />
                 <area id="marcas_hatunsolAreaB" shape="poly" coords="491,305,493,824,928,571" href="javascript:;" alt="" />
                 <area id="marcas_hatunsolAreaC" shape="poly" coords="1434,302,992,561,1442,827" href="javascript:;" alt="" />
             </map>
@@ -96,7 +98,7 @@
 
             $('#marcas_hatunsolAreaA')
                 .on('click', function() {
-                    window.location = 'index.html';
+                    window.location = 'hatunsol.html';
                 })
                 .mouseenter(function() {
                     $('#marcas_hatunsolImage1').css('display', 'block');
@@ -133,6 +135,11 @@
                     $('#marcas_hatunsolImage3').css('display', 'none');
                 });
         });
+
+        function goToHome() {
+            localStorage.setItem("goHome", "true");
+            window.location = 'index.html'
+        }
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>

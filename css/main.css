@@ -2873,6 +2873,16 @@ footer ul a:visited {
   font-family: DIN-light, serif;
 }
 
+.hatunFont2{
+  color: #fcdc00 !important;
+  font-family: Berthold-Akzidenz-Grotesk, serif;
+}
+
+.hatunFont3{
+  color: #fcdc00 !important;
+  font-family: Berthold-Akzidenz-Grotesk2, serif;
+}
+
 .hatunFontSlogan{
   color: #fcdc00 !important;
   font-family: JennaSue, serif;
@@ -2947,8 +2957,15 @@ video {
   background-size: 100% 100%;
 }
 
+.creditos {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/creditos__foto_830.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
 .hatunCasaFontTitle {
-  font-size: 6rem;
+  font-size: 9rem;
   font-weight: bold;
   color: white !important;
   padding-left: 10%;

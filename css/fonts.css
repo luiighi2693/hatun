@@ -166,6 +166,16 @@
 }
 
 @font-face {
+  font-family: "Berthold-Akzidenz-Grotesk";
+  src: url("../fonts/muli/Berthold_Akzidenz_Grotesk_BE_MdCn_0.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: "Berthold-Akzidenz-Grotesk2";
+  src: url("../fonts/muli/Berthold_Akzidenz_Grotesk_BE_Regular.woff2") format("opentype");
+}
+
+@font-face {
   font-family: "JennaSue";
   src: url("../fonts/muli/JennaSue.woff2") format("opentype");
 }
