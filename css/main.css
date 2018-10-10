@@ -3009,3 +3009,15 @@ video {
     font-size: 7rem !important;
   }
 }
+
+.hatunDropDown{
+  color: #000 !important;
+  line-height: 1 !important;
+  font-size: 1.5rem !important;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.hatunDropDown:hover{
+  color: #fff !important;
+}
