@@ -59,9 +59,9 @@
            <ul class="header-main-nav">
                <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
-               <li class="current"><a class="hatunFont"  href="#" title="pricing">TESTIMONIOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
+               <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
+               <li class="hatunFont"><a href="creditos.html" title="testimonials" class="hatunFont">CRÉDITOS</a></li>
+               <li class="current"><a class="hatunFont"  href="#" title="contact">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
        </nav>
@@ -70,27 +70,43 @@
    	
    </header> <!-- /header -->
 
-    <div class="home-scrolldown" style="display: none;">
-        <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
-            <span>Scroll Down</span>
-            <i class="icon-arrow-right" aria-hidden="true"></i>
-        </a>
+    <section id="equipo" style="background-color: black;">
+        <div style="display: flex;">
+            <img name="equipoImage" src="images/hatun/trabaja_830.jpg" width="1400" height="830" border="0" id="equipoImage" usemap="#m_equipoImage" alt="" style="width: 100%; height: auto;"/>
+        </div>
+    </section>
+
+    <section id="contacto" class="contactoWithoutForm">
+        <div style="padding-top: 30px;">
+            <div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">SE PARTE DE NUESTRO EQUIPO,</div>
+            <div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">D&Eacute;JANOS TUS DATOS</div>
+        </div>
+    </section>
+
+    <section id="contacto2" class="contacto">
+        <div style="padding-top: 40px;     display: flex;">
+            <div style="width:30%; line-height: 1; padding-top: 15%;">
+            </div>
+            <div style="width: 70%; padding-right: 10%">
+                <input type="text" placeholder="NOMBRE Y APELLIDOS" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0;"/>
+                <div style="display: flex;">
+                    <input type="text" placeholder="DNI" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                    <input type="text" placeholder="CELULAR" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
+                </div>
+                <input type="text" placeholder="DIRECCIÓN" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                <div style="display: flex;">
+                    <input type="text" placeholder="DISTRITO" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                    <input type="text" placeholder="E-MAIL" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
+                </div>
+                <input type="text" placeholder="ADJUNTA TU CV" style="    background-color: white; width: 47%; height: 4rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-bottom: 5%;"/>
+                <a href="#"><img src="images/hatun/enviar.png" style="    width: 200px; float: right; margin-left: auto; margin-right: auto; display: block;"/></a>
+            </div>
+        </div>
+    </section>
+
+    <div id="preloader">
+    	<div id="loader"></div>
     </div>
-
-    <section id="brindamos" style="background-color: black;">
-        <div style="display: flex;">
-            <img name="brindamosImage" src="images/hatun/brindamos_830.jpg" width="1400" height="830" border="0" id="brindamosImage" usemap="#m_brindamosImage" alt="" style="width: 100%; height: auto;"/>
-            <map name="m_brindamosImage" id="m_brindamosImage">
-                <area id="brindamosArea" shape="poly" coords="651,709,693,709,671,745" title="Nosotros" alt="Nosotros" />
-            </map>
-        </div>
-    </section>
-
-    <section id="testimonios" style="background-color: black;">
-        <div style="display: flex;">
-            <img name="testimoniosImage" src="images/hatun/testimonios.jpg" width="1399" height="1594" border="0" id="testimoniosImage" alt="" style="width: 100%; height: auto;"/>
-        </div>
-    </section>
 
     <footer style="padding-top: 4rem;">
         <div class="footer-main">
@@ -123,27 +139,14 @@
         </div>
     </footer>
 
-    <div id="preloader">
-    	<div id="loader"></div>
-    </div>
-
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
-        function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
-        }
 
         $(document).ready(function(e) {
-            $('img[usemap]').rwdImageMaps();
 
-            $('#brindamosArea').on('click', function() {
-                goTo('testimonios');
-            });
         });
 
         function goToHome() {

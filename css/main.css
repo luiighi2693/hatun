@@ -2959,9 +2959,20 @@ video {
 
 .creditos {
   width: 100%;
-  height: 100%;
+  height: 95%;
   background: url("../images/hatun/creditos__foto_830.jpg") no-repeat center;
   background-size: 100% 100%;
+}
+
+.contacto {
+  width: 100%;
+  height: 100%;
+  background-color: white !important;
+}
+
+.contactoWithoutForm {
+  width: 100%;
+  background-color: white !important;
 }
 
 .hatunCasaFontTitle {
@@ -2985,4 +2996,16 @@ video {
   color: white !important;
   padding-left: 10%;
   margin-bottom: 0rem;
+}
+
+.hatunFontCredit {
+  color: black !important;
+  font-size: 8rem !important;
+  /*transform: scale(1,0.7);*/
+}
+
+@media (max-width: 1170px) {
+  .hatunFontCredit{
+    font-size: 7rem !important;
+  }
 }
