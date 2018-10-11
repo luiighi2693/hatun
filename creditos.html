@@ -62,7 +62,7 @@
                <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
                <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li class="current">
+               <li id="dropDownParentList" class="current">
                    <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
                        <a class="dropdown-item hatunFont hatunDropDown" href="#" style="text-decoration: none;">SOLICITUD</a>
@@ -85,8 +85,8 @@
     <section id="creditos" class="creditos">
         <div style="padding-top: 60px;     display: flex;">
             <div style="width:60%; line-height: 1; padding-top: 15%;">
-                <div class="hatunFont3 hatunCasaFontTitle2 hatunFontCredit">TE AYUDAMOS</div>
-                <div class="hatunFont hatunCasaFontTitle" style="color: black !important;     font-size: 6rem; font-weight: 100;     transform: scale(1,0.8);">A LOGRARLO</div>
+                <!--<div class="hatunFont3 hatunCasaFontTitle2 hatunFontCredit">TE AYUDAMOS</div>-->
+                <!--<div class="hatunFont hatunCasaFontTitle" style="color: black !important;     font-size: 6rem; font-weight: 100;     transform: scale(1,0.8);">A LOGRARLO</div>-->
             </div>
             <div style="width: 50%; padding-left: 10%;">
                 <div style="width:70%;     background-color: #151515; height: 105%;     border-radius: 15px;     opacity: 0.7;">
@@ -104,12 +104,12 @@
         </div>
     </section>
 
-    <section id="tracking" style="background-color: #fcdc00;">
-        <div style="padding-top: 8%;     display: flex; padding-bottom: 12%;">
+    <section id="tracking" class="tracking">
+        <div style="padding-top: 10%;     display: flex; padding-bottom: 12%;">
             <div style="width:60%; line-height: 1; padding-top: 5%;">
-                <div class="hatunFont2 hatunCasaFontTitle2" style="transform: scale(1.6,0.6);     padding-left: 25% !important; color: black !important;     font-size: 10rem !important; font-weight: normal !important; line-height: 0.7;">¿COMO VA</div>
-                <div class="hatunFont hatunCasaFontTitle2" style="color: black !important;     font-size: 8rem; font-weight: normal; line-height: 0.7; transform: scale(1,0.6);">MI CR&Eacute;DITO?</div>
-                <div class="hatunFont hatunCasaFontTitle2" style="color: black !important;     font-size: 3rem; font-weight: normal; line-height: 0.7;">S&Iacute;GUELO PASO A PASO</div>
+                <!--<div class="hatunFont2 hatunCasaFontTitle2" style="transform: scale(1.6,0.6);     padding-left: 25% !important; color: black !important;     font-size: 10rem !important; font-weight: normal !important; line-height: 0.7;">¿COMO VA</div>-->
+                <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important;     font-size: 8rem; font-weight: normal; line-height: 0.7; transform: scale(1,0.6);">MI CR&Eacute;DITO?</div>-->
+                <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important;     font-size: 3rem; font-weight: normal; line-height: 0.7;">S&Iacute;GUELO PASO A PASO</div>-->
             </div>
             <div style="width: 50%; padding-left: 10%;">
                 <div style="width:70%;     background-color: #fef5b2; height: 115%; border-radius: 15px;">
@@ -163,6 +163,9 @@
     <script>
 
         $(document).ready(function(e) {
+            $('#dropdownMenuLink').on('mouseover', function() {
+                $('#dropDownParentList').addClass('open');
+            });
 
         });
 
