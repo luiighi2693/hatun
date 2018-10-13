@@ -77,6 +77,10 @@
         </a>
     </div>
 
+    <section id="blannk" style="height: 72px;">
+        this is a demo
+    </section>
+
     <section id="brindamos" style="background-color: black;">
         <div style="display: flex;">
             <img name="brindamosImage" src="images/hatun/brindamos_830.jpg" width="1400" height="830" border="0" id="brindamosImage" usemap="#m_brindamosImage" alt="" style="width: 100%; height: auto;"/>
@@ -143,6 +147,14 @@
 
             $('#brindamosArea').on('click', function() {
                 goTo('testimonios');
+            });
+
+            let images = ['brindamosImage'];
+
+            images.forEach(image => {
+                $('#'+image+'')
+                    .width($(window).width().toString())
+                    .height(($(window).height()-72).toString());
             });
         });
 

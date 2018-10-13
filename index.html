@@ -105,33 +105,34 @@
             </a>
         </div>
 
-        <section id="home" data-parallax="scroll" data-image-src="images/hatun/foot_home.jpg">
-            <div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);">
-                <p class="hatunFontSlogan hatunFontSize">
-                    Para vivir mejor
-                </p>
+        <!--<section id="home" data-parallax="scroll" data-image-src="images/hatun/foot_home.jpg">-->
+            <!--<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);">-->
+                <!--<p class="hatunFontSlogan hatunFontSize">-->
+                    <!--Para vivir mejor-->
+                <!--</p>-->
+            <!--</div>-->
+
+            <!--<div class="home-scrolldown" style="right: 45% !important; bottom: 12%; !important;">-->
+                <!--<a href="#aboutUs" class="scroll-icon smoothscroll">-->
+                    <!--<img src="images/hatun/yellow_row.png" width="30px" height="30px" style="transform: rotate(30deg);">-->
+                <!--</a>-->
+            <!--</div>-->
+
+        <!--</section> &lt;!&ndash; end home &ndash;&gt;-->
+
+        <section id="home1" style="background-color: black;">
+            <div style="display: flex;">
+                <!--<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); z-index: 1">-->
+                    <!--<p class="hatunFontSlogan hatunFontSize">-->
+                        <!--Para vivir mejor-->
+                    <!--</p>-->
+                <!--</div>-->
+
+                <img name="homeImage" src="images/hatun/foot_home_texto.jpg" width="2500" height="1080" border="0" id="homeImage" usemap="#m_homeImage" alt="" style="max-width: 100%; height: auto;"/>
+                <map name="m_homeImage" id="m_homeImage">
+                    <area id="homeArea" shape="poly" coords="1191,990,1243,990,1214,1036" title="About" alt="About" />
+                </map>
             </div>
-
-            <div class="home-scrolldown" style="right: 45% !important; bottom: 12%; !important;">
-                <a href="#aboutUs" class="scroll-icon smoothscroll">
-                    <img src="images/hatun/yellow_row.png" width="30px" height="30px" style="transform: rotate(30deg);">
-                </a>
-            </div>
-
-        </section> <!-- end home -->
-
-        <section id="home1" class="homeHidden" style="background-color: black; position: relative;">
-
-            <div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); z-index: 1">
-                <p class="hatunFontSlogan hatunFontSize">
-                    Para vivir mejor
-                </p>
-            </div>
-
-            <img name="homeImage" src="images/hatun/foot_home_arrow.jpg" width="1920" height="1080" border="0" id="homeImage" usemap="#m_homeImage" alt="" style="max-width: 100%; height: auto;"/>
-            <map name="m_homeImage" id="m_homeImage">
-                <area id="homeArea" shape="poly" coords="915,938,992,938,959,1002" title="About" alt="About" />
-            </map>
         </section> <!-- end home -->
 
         <section id="aboutUs" style="background-color: black;">
@@ -275,6 +276,15 @@
                   localStorage.setItem("goHome", "false");
               }
             }
+
+
+            let images = ['homeImage', 'aboutImage', 'misionImage', 'visionImage'];
+
+            images.forEach(image => {
+                $('#'+image+'')
+                    .width($(window).width().toString())
+                    .height($(window).height().toString());
+            });
         });
 
         // $('#imagePreview').on('ended', function(e) {
