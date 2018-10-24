@@ -70,13 +70,23 @@
    	
    </header> <!-- /header -->
 
+    <div class="home-scrolldown" style="display: none;">
+        <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
+            <span>Scroll Down</span>
+            <i class="icon-arrow-right" aria-hidden="true"></i>
+        </a>
+    </div>
+
     <section id="equipo" style="background-color: black;">
         <div style="display: flex;">
-            <img name="equipoImage" src="images/hatun/trabaja_830.jpg" width="1400" height="830" border="0" id="equipoImage" alt="" style="width: 100%; height: auto;"/>
+            <img name="equipoImage" src="images/hatun/trabaja-con-nosotros_texto.jpg" width="2500" height="1080" border="0" id="equipoImage" usemap="#m_equipoImage" alt="" style="width: 100%; height: auto;"/>
+            <map name="m_equipoImage" id="m_equipoImage">
+                <area id="equipoArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Equipo" alt="Equipo" />
+            </map>
         </div>
     </section>
 
-    <section id="contacto" class="contactoWithoutForm">
+    <section id="contacto" class="contactoWithoutForm" style="    padding-top: 72px;">
         <img name="marcas_hatunsolImage" id="mejorEquipo" src="images/hatun/trabaja_1Fixed.jpg" border="0" style="max-width: 100%; height: 100%;"/>
         <!--<div style="padding-top: 30px;">-->
             <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">SE PARTE DE NUESTRO EQUIPO,</div>-->
@@ -146,7 +156,19 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
 
+        function goTo(section) {
+            $('#goToAbout')
+                .attr("href", "#" + section)
+                .click();
+        }
+
         $(document).ready(function(e) {
+            $('img[usemap]').rwdImageMaps();
+
+            $('#equipoArea').on('click', function() {
+                goTo('contacto');
+            });
+
             let images = ['equipoImage'];
 
             images.forEach(image => {
