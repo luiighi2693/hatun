@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- script
    ================================================== -->
@@ -49,7 +50,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important;">
+   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
     <div class="header-logo">
         <a href="index.html"></a>
@@ -60,7 +61,13 @@
                <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
                <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
+               <li id="dropDownParentList" class="current">
+                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
+                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                   </div>
+               </li>
                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
@@ -80,15 +87,15 @@
     <section id="hatuncasaSection" class="hatuncasaSection">
         <div style="padding-top: 130px;     display: flex;">
             <div style="width:60%; line-height: 1; margin-top: -26px;">
-                <img src="images/hatun/Logo_hatuncasa.png" style="    background-color: white;         width: 55%; opacity: 0.8; padding-left: 5%;"/>
-                <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important; padding-top: 4% !important;">AMPL&Iacute;A,</div>
+                <img src="images/hatun/Logo_hatuncasa.png" style="    background-color: white;width: 40%;opacity: 0.8;padding-left: 8%;padding-right: 3%;"/>
+               <!-- <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important; padding-top: 4% !important;">AMPL&Iacute;A,</div>
                 <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important;">TECHA O</div>
                 <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important;">CONSTRUYE</div>
-                <div class="hatunFont3 hatunCasaFontTitle3">Nosotros te ayudamos</div>
-                <a href="#"><img src="images/hatun/registrateYaCasa.png" style="    width: 35%; padding-left: 10%; padding-top: 4%;"/></a>
+                <div class="hatunFont3 hatunCasaFontTitle3">Nosotros te ayudamos</div>-->
+                <a href="#" style="display: none;"><img src="images/hatun/registrateYaCasa.png" style="    width: 35%; padding-left: 10%; padding-top: 4%;"/></a>
             </div>
             <div style="width: 50%; padding-left: 10%;">
-                <div style="width:80%;     background-color: #151515; height: 80%; opacity: 0.9; border-radius: 15px;">
+                <div style="width:80%;     background-color: #151515; height: 114%; opacity: 0.9; border-radius: 15px;">
                     <div class="hatunFont2 hatunCasaFontTitle" style="    font-size: 3rem; text-align: center; padding-top: 5%; padding-left: 0; letter-spacing: 2px;">OBT&Eacute;N TU CR&Eacute;DITO YA!</div>
                     <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;"/>
                     <input type="email" placeholder="EMAIL" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
@@ -96,13 +103,13 @@
                     <input type="text" placeholder="OBRA" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
                     <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;">Un asesor se comunicar&aacute; contigo lo m&aacute;s</div>
                     <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;     line-height: 0.7;">pronto posible</div>
-                    <a href="#"><img src="images/hatun/registraTusDatosCasa.png" style="    width: 60%; text-align: center; padding-top: 4%; margin-left: auto; margin-right: auto; display: block;"/></a>
+                    <a href="#"><img src="images/hatun/hatuncasaRegistraTusDatos.png" style="    width: 60%; text-align: center; padding-top: 4%; margin-left: auto; margin-right: auto; display: block;"/></a>
                 </div>
             </div>
         </div>
         <div class="home-scrolldown" style="right: 45% !important;">
             <a href="#nosotros" class="scroll-icon smoothscroll">
-                <img src="images/hatun/oraje_row.png" width="40px" height="40px" style="transform: rotate(30deg);">
+                <img src="images/hatun/oraje_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
             </a>
         </div>
     </section>
@@ -131,6 +138,37 @@
         <!--</div>-->
     <!--</section>-->
 
+    <footer style="padding-top: 4rem; background-color: #111111;">
+        <div class="footer-main">
+            <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
+                <div class="col-three md-1-6 tab-full footer-info">
+                    <div class="footer-logo" onclick="goToHome()"></div>
+                </div>
+
+                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
+                    <a href="marcas.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">MARCAS</h4></a>
+                    <a href="hatunsol.html"><h5 class="hatunFont" style="color: white !important;">HATUNSOL</h5></a>
+                    <h5 class="hatunFont" style="color: white !important;">HATUNCASA</h5>
+                    <h5 class="hatunFont" style="color: white !important;">HATUNMOTO</h5>
+                </div>
+
+                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
+                    <a href="creditos.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">CRÉDITOS</h4></a>
+                    <h5 class="hatunFont" style="color: white !important;">SEGUIMIENTO</h5>
+                </div>
+
+                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
+                    <a href="contacto.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">TRABAJA CON NOSOTROS</h4></a>
+                    <h5 class="hatunFont" style="color: white !important;">CONTACTO</h5>
+                </div>
+
+                <div class="col-three md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
+                    <h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">LIBRO DE RECLAMACIONES</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <div id="preloader">
     	<div id="loader"></div>
     </div>
@@ -147,6 +185,10 @@
         }
 
         $(document).ready(function(e) {
+            $('#dropdownMenuLink').on('mouseover', function() {
+                $('#dropDownParentList').addClass('open');
+            });
+
             $('img[usemap]').rwdImageMaps();
 
             $('#nosotrosArea').on('click', function() {
@@ -173,7 +215,8 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 

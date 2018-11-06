@@ -51,7 +51,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important;">
+   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
     <div class="header-logo">
         <a href="index.html"></a>
@@ -65,7 +65,7 @@
                <li id="dropDownParentList" class="current">
                    <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                       <a class="dropdown-item hatunFont hatunDropDown" href="#" style="text-decoration: none;">SOLICITUD</a>
+                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="#" style="text-decoration: none;">SOLICITUD</a>
                        <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="#" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
                    </div>
                </li>
@@ -96,7 +96,7 @@
                 <!--<div class="hatunFont hatunCasaFontTitle" style="color: black !important;     font-size: 6rem; font-weight: 100;     transform: scale(1,0.8);">A LOGRARLO</div>-->
             </div>
             <div style="width: 50%; padding-left: 10%;">
-                <div style="width:70%;     background-color: #151515; height: 105%;     border-radius: 15px;     opacity: 0.7;">
+                <div style="width:70%;     background-color: #151515; height: 105%;     border-radius: 15px;     opacity: 0.9;">
                     <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 2rem; text-align: center; padding-top: 5%; letter-spacing: 1px; padding-left: 0; color: #fcdc00 !important;">OBT&Eacute;N TU CR&Eacute;DITO YA!</div>
                     <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;     border-radius: 0;"/>
                     <input type="email" placeholder="EMAIL" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;     border-radius: 0;"/>
@@ -133,7 +133,7 @@
     	<div id="loader"></div>
     </div>
 
-    <footer style="padding-top: 4rem; background-color: black;">
+    <footer style="padding-top: 4rem; background-color: #111111;">
         <div class="footer-main">
             <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
                 <div class="col-three md-1-6 tab-full footer-info">
@@ -175,6 +175,8 @@
         }
 
         $(document).ready(function(e) {
+            setTimeout(checkNavegation, 1000);
+
             $('#dropdownMenuLink').on('mouseover', function() {
                 $('#dropDownParentList').addClass('open');
             });
@@ -183,11 +185,21 @@
                 goTo('tracking');
             });
 
+            $('#solicitud').on('click', function() {
+                goTo('blannk');
+            });
+
         });
 
         function goToHome() {
             localStorage.setItem("goHome", "true");
             window.location = 'index.html'
+        }
+
+        function checkNavegation() {
+            if (window.location.href.indexOf('#') !== -1) {
+                goTo(window.location.href.split('#')[1]);
+            }
         }
     </script>
     <script src="js/plugins.js"></script>

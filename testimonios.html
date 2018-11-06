@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- script
    ================================================== -->
@@ -49,7 +50,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important;">
+   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
     <div class="header-logo">
         <a href="index.html"></a>
@@ -60,7 +61,13 @@
                <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
                <li class="current"><a class="hatunFont"  href="#" title="pricing">TESTIMONIOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
+               <li id="dropDownParentList" class="current">
+                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
+                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                   </div>
+               </li>
                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
@@ -97,39 +104,43 @@
         <div  style="    display: flex;     background-color: white;">
             <div style="width: 20%;"></div>
             <div style="width: 80%;">
-                <div style="width: 100%; display: flex;     margin-bottom: 5%;">
-                    <div style="width: 50%;     padding-right: 10%; margin-top: -4%;">
-                        <video controls style="height: 97%;">
+                <div style="width: 100%; display: flex;">
+                    <div style="width: 50%;     padding-right: 10%;">
+                        <video id="video1" controls style="height: 97%;">
                             <source src=videos/testimonio1.mp4 type=video/mp4>
                         </video>
                     </div>
                     <div style="width: 50%; padding-right: 10%;">
-                        <img src="images/hatun/testimonio1.jpg" style="height: auto; width: 100%">
+                        <img id="image1" src="images/hatun/testimonial_1.jpg" style="height: auto;     width: 63%;">
                     </div>
                 </div>
-                <div style="width: 100%;"></div>
+                <div style="width: 100%; margin-bottom: 5%;">
+                    <img src="images/hatun/testimonioTexto1.png">
+                </div>
             </div>
         </div>
 
         <div  style="    display: flex;     background-color: white;">
             <div style="width: 20%;"></div>
             <div style="width: 80%;">
-                <div style="width: 100%; display: flex;     margin-bottom: 5%;">
-                    <div style="width: 50%;     padding-right: 10%; margin-top: -4%;">
-                        <video controls style="height: 97%;">
+                <div style="width: 100%; display: flex;">
+                    <div style="width: 50%;     padding-right: 10%; ">
+                        <video id="video2" controls style="height: 97%;">
                             <source src=videos/testimonio2.mp4 type=video/mp4>
                         </video>
                     </div>
-                    <div style="width: 50%; padding-right: 10%; margin-top: -4%;">
-                        <img src="images/hatun/testimonio2.jpg" style="height: auto; width: 100%">
+                    <div style="width: 50%; padding-right: 10%;">
+                        <img id="image2" src="images/hatun/testimonial_2.jpg" style="height: auto;  width: 63%;">
                     </div>
                 </div>
-                <div style="width: 100%;"></div>
+                <div style="width: 100%; margin-bottom: 5%;">
+                    <img src="images/hatun/testimonioTexto2.png">
+                </div>
             </div>
         </div>
     </section>
 
-    <footer style="padding-top: 4rem;">
+    <footer style="padding-top: 4rem; background-color: #111111;">
         <div class="footer-main">
             <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
                 <div class="col-three md-1-6 tab-full footer-info">
@@ -176,6 +187,10 @@
         }
 
         $(document).ready(function(e) {
+            $('#dropdownMenuLink').on('mouseover', function() {
+                $('#dropDownParentList').addClass('open');
+            });
+
             $('img[usemap]').rwdImageMaps();
 
             $('#brindamosArea').on('click', function() {
@@ -189,6 +204,14 @@
                     .width($(window).width().toString())
                     .height(($(window).height()-72).toString());
             });
+
+            $('#image1')
+                .width($('#video1').height())
+                .height($('#video1').height());
+
+            $('#image2')
+                .width($('#video2').height())
+                .height($('#video2').height());
         });
 
         function goToHome() {
@@ -198,6 +221,8 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
 </body>
 

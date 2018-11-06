@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- script
    ================================================== -->
@@ -54,7 +55,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important;">
+   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
    		<div class="header-logo">
 	        <a href="index.html"></a>
@@ -65,7 +66,13 @@
 				<li class="current"><a class="smoothscroll hatunFont"  href="#home" title="home">INICIO</a></li>
                 <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
 				<li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-				<li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
+                <li id="dropDownParentList" class="current">
+                    <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                        <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
+                        <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                    </div>
+                </li>
                 <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
 			</ul>
 
@@ -128,10 +135,15 @@
                     <!--</p>-->
                 <!--</div>-->
 
-                <img name="homeImage" src="images/hatun/home_texto.jpg" width="2500" height="1080" border="0" id="homeImage" usemap="#m_homeImage" alt="" style="max-width: 100%; height: auto;"/>
-                <map name="m_homeImage" id="m_homeImage">
+                <img name="homeImage" src="images/hatun/para-vivir-mejor.jpg" width="2500" height="1080" border="0" id="homeImage" usemap="#m_homeImage" alt="" style="max-width: 100%; height: auto;"/>
+                <!--<map name="m_homeImage" id="m_homeImage">
                     <area id="homeArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="About" alt="About" />
-                </map>
+                </map>-->
+                <div class="home-scrolldown" style="right: 45% !important;">
+                    <a href="#aboutUs" class="scroll-icon smoothscroll">
+                        <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
+                    </a>
+                </div>
             </div>
         </section> <!-- end home -->
 
@@ -155,9 +167,9 @@
 
         <section id="vision" style="background-color: black;">
             <div style="display: flex;">
-                <img name="visionImage" src="images/hatun/vision_830.jpg" width="1400" height="830" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>
+                <img name="visionImage" src="images/hatun/vision_texto.jpg" width="2500" height="1080" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>
                 <map name="m_visionImage" id="m_visionImage">
-                    <area id="visionArea" shape="poly" coords="693,705,725,707,709,735" title="Mision" alt="Mision" />
+                    <area id="visionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />
                 </map>
             </div>
         </section>
@@ -173,7 +185,7 @@
 
         <section id="valores" style="background-color: black;">
             <div style="display: flex;">
-                <img name="valoresImage" src="images/hatun/valores_beneficios.jpg" width="2500" height="1400" border="0" id="valoresImage" alt="" style="width: 100%; height: -webkit-fill-available;"/>
+                <img name="valoresImage" src="images/hatun/valores_beneficios.jpg" width="2500" height="1400" border="0" id="valoresImage" alt="" style="width: 100%; height: auto;"/>
             </div>
         </section>
 
@@ -213,7 +225,7 @@
     	<!--<div id="loader"></div>-->
     <!--</div>-->
 
-    <footer style="padding-top: 4rem;">
+    <footer style="padding-top: 4rem; background-color: #111111;">
         <div class="footer-main">
             <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
                 <div class="col-three md-1-6 tab-full footer-info">
@@ -256,6 +268,10 @@
         }
 
         $(document).ready(function(e) {
+            $('#dropdownMenuLink').on('mouseover', function() {
+                $('#dropDownParentList').addClass('open');
+            });
+
             $('img[usemap]').rwdImageMaps();
 
             $('#homeArea').on('click', function() {
@@ -291,6 +307,10 @@
                     .width($(window).width().toString())
                     .height($(window).height().toString());
             });
+
+            $('#valoresImage')
+                .width($(window).width().toString())
+                .height( ($(window).height() + 70).toString());
         });
 
         // $('#imagePreview').on('ended', function(e) {
@@ -309,6 +329,7 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>

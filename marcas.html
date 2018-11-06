@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <!-- script
    ================================================== -->
@@ -49,7 +50,7 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important;">
+   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
        <div class="header-logo">
            <a href="index.html"></a>
@@ -60,7 +61,13 @@
                <li><a class="hatunFont" href="#" onclick="goToHome()" title="home">INICIO</a></li>
                <li class="current"><a href="#" title="Marks" class="smoothscroll hatunFont">MARCAS</a></li>
                <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="creditos.html" title="testimonials">CRÉDITOS</a></li>
+               <li id="dropDownParentList" class="current">
+                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
+                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                   </div>
+               </li>
                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
@@ -94,6 +101,10 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
         $(document).ready(function(e) {
+            $('#dropdownMenuLink').on('mouseover', function() {
+                $('#dropDownParentList').addClass('open');
+            });
+
             $('img[usemap]').rwdImageMaps();
 
             $('#marcas_hatunsolAreaA')
@@ -143,6 +154,8 @@
     </script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 
 </body>
 
