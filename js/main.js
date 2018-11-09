@@ -141,6 +141,25 @@
 
 	};
 
+	var ssSmoothScroll2 = function() {
+
+		$('.smoothscroll2').on('click', function (e) {
+			var target = this.hash,
+			$target    = $(target);
+
+		 	e.preventDefault();
+		 	e.stopPropagation();
+
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top - 72
+			}, cfg.scrollDuration, 'swing', function () {
+				window.location.hash = target;
+			});
+
+	  	});
+
+	};
+
 
 
   /* Placeholder Plugin Settings
@@ -244,6 +263,7 @@
 		ssOwlCarousel();
 		ssWaypoints();
 		ssSmoothScroll();
+		ssSmoothScroll2();
 		ssPlaceholder();
 		ssAlertBoxes();
 		ssAOS();
