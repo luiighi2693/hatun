@@ -84,9 +84,13 @@
         </a>
     </div>
 
+    <section id="blannk" style="height: 72px;">
+        this is a demo
+    </section>
+
     <section id="hatuncasaSection" class="hatuncasaSection">
-        <div style="padding-top: 130px;     display: flex;">
-            <div style="width:60%; line-height: 1; margin-top: -26px;">
+        <div style="padding-top: 58px;     display: flex;">
+            <div style="width:60%; line-height: 1; margin-top: -26px; ">
                 <!--<img src="images/hatun/Logo_hatuncasa.png" style="    background-color: white;width: 40%;opacity: 0.8;padding-left: 8%;padding-right: 3%;"/>-->
                 <!--<div class="hatunFont4 hatunCasaFontTitle" style="transform: scale(1.2,1.2);     padding-left: 16% !important; padding-top: 4% !important;">AMPL&Iacute;A,</div>-->
                 <!--<div class="hatunFont4 hatunCasaFontTitle" style="transform: scale(1.2,1.2);     padding-left: 16% !important; padding-top: 1% !important;">TECHA O</div>-->
@@ -108,7 +112,7 @@
             </div>
         </div>
         <div class="home-scrolldown" style="right: 48% !important;">
-            <a href="#nosotros" class="scroll-icon smoothscroll2">
+            <a href="#nosotros" class="scroll-icon smoothscroll" id="hatuncasaPrincipal">
                 <img src="images/hatun/oraje_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
             </a>
         </div>
@@ -184,9 +188,26 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -204,13 +225,19 @@
                 goTo('contactenos');
             });
 
+            $('#hatuncasaPrincipal').on('click', function() {
+                goTo('nosotros');
+            });
+
             let images = ['nosotrosImage', 'beneficiosImage'];
 
             images.forEach(image => {
                 $('#'+image+'')
                     .width($(window).width().toString())
-                    .height($(window).height().toString());
+                    .height($(window).height().toString() - 72);
             });
+
+            $('#hatuncasaSection').height($('#hatuncasaSection').height() - 72);
         });
 
         function goToHome() {

@@ -51,32 +51,32 @@
 
     <!-- header 
    ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
+    <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
 
-    <div class="header-logo">
-        <a href="index.html"></a>
-    </div>
+        <div class="header-logo">
+            <a href="index.html"></a>
+        </div>
 
-       <nav id="header-nav-wrap">
-           <ul class="header-main-nav">
-               <li><a class="hatunFont" href="home.html" title="home">INICIO</a></li>
-               <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
-               <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li id="dropDownParentList" class="current">
-                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
-                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="#" style="text-decoration: none;">SOLICITUD</a>
-                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="#" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
-                   </div>
-               </li>
-               <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
-           </ul>
-           <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-       </nav>
+        <nav id="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li><a class="hatunFont" href="home.html" title="home">INICIO</a></li>
+                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
+                <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
+                <li id="dropDownParentList" class="current">
+                    <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                        <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="#" style="text-decoration: none;">SOLICITUD</a>
+                        <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="#" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                    </div>
+                </li>
+                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
+            </ul>
+            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
+        </nav>
 
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
    	
-   </header> <!-- /header -->
+    </header> <!-- /header -->
 
     <div class="home-scrolldown" style="display: none;">
         <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
@@ -85,7 +85,7 @@
         </a>
     </div>
 
-    <section id="blannk" style="height: 72px;">
+    <section id="blank" style="height: 72px;">
         this is a demo
     </section>
 
@@ -174,9 +174,26 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script>
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -191,9 +208,12 @@
             });
 
             $('#solicitud').on('click', function() {
-                goTo('blannk');
+                goTo('creditos');
             });
 
+
+
+            $('#creditos').height($('#creditos').height() - 72);
         });
 
         function goToHome() {
@@ -203,7 +223,9 @@
 
         function checkNavegation() {
             if (window.location.href.indexOf('#') !== -1) {
-                goTo(window.location.href.split('#')[1]);
+                if (window.location.href.split('#')[1].length !== 0) {
+                    goTo(window.location.href.split('#')[1]);
+                }
             }
         }
     </script>

@@ -127,6 +127,10 @@
 
         <!--</section> &lt;!&ndash; end home &ndash;&gt;-->
 
+        <section id="blannk" style="height: 72px;">
+            this is a demo
+        </section>
+
         <section id="home1" style="background-color: black;">
             <div style="display: flex;">
                 <!--<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); z-index: 1">-->
@@ -140,7 +144,7 @@
                     <area id="homeArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="About" alt="About" />
                 </map>-->
                 <div class="home-scrolldown" style="right: 48% !important;">
-                    <a href="#aboutUs" class="scroll-icon smoothscroll">
+                    <a href="#aboutUs" class="scroll-icon smoothscroll" id="homeArea">
                         <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
                     </a>
                 </div>
@@ -267,9 +271,26 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -310,7 +331,7 @@
             images.forEach(image => {
                 $('#'+image+'')
                     .width($(window).width().toString())
-                    .height($(window).height().toString());
+                    .height($(window).height().toString() - 72);
             });
 
             $('#valoresImage')

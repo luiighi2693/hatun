@@ -84,8 +84,12 @@
         </a>
     </div>
 
+    <section id="blannk" style="height: 72px;">
+        this is a demo
+    </section>
+
     <section id="hatunsolSection" class="hatunsolSection">
-        <div style="padding-top: 130px;     display: flex;">
+        <div style="padding-top: 58px;     display: flex;">
             <div style="width:60%; line-height: 1;">
                 <img src="images/hatun/logo_hatunsol.png" style="    background-color: white;         width: 55%; opacity: 0.8; padding-left: 5%;"/>
                 <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important; padding-top: 4% !important;">CONSTRUYE</div>
@@ -108,7 +112,7 @@
             </div>
         </div>
         <div class="home-scrolldown" style="right: 48% !important;">
-            <a href="#nosotros" class="scroll-icon smoothscroll2">
+            <a href="#nosotros" class="scroll-icon smoothscroll" id="hatunsolPrincipal">
                 <img src="images/hatun/green_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
             </a>
         </div>
@@ -193,9 +197,26 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -209,6 +230,10 @@
                 goTo('beneficios');
             });
 
+            $('#hatunsolPrincipal').on('click', function() {
+                goTo('nosotros');
+            });
+
             $('#beneficiosArea').on('click', function() {
                 goTo('contactenos');
             });
@@ -218,8 +243,10 @@
             images.forEach(image => {
                 $('#'+image+'')
                     .width($(window).width().toString())
-                    .height($(window).height().toString());
+                    .height($(window).height().toString() - 72);
             });
+
+            $('#hatunsolSection').height($('#hatunsolSection').height() - 72);
         });
 
         function goToHome() {

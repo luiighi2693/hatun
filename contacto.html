@@ -84,12 +84,16 @@
         </a>
     </div>
 
+    <section id="blank" style="height: 72px;">
+        this is a demo
+    </section>
+
     <section id="equipo" style="background-color: black;">
         <div style="display: flex;">
             <img name="equipoImage" src="images/hatun/trabaja_con_nosotros.jpg" width="2500" height="1080" border="0" id="equipoImage" alt="" style="width: 100%; height: auto;"/>
 
             <div class="home-scrolldown" style="right: 48% !important;">
-                <a href="#contacto" class="scroll-icon smoothscroll">
+                <a href="#contacto" class="scroll-icon smoothscroll" id="equipoArea">
                     <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
                 </a>
             </div>
@@ -99,7 +103,7 @@
         </div>
     </section>
 
-    <section id="contacto" class="contactoWithoutForm" style="    padding-top: 72px;">
+    <section id="contacto" class="contactoWithoutForm">
         <img name="marcas_hatunsolImage" id="mejorEquipo" src="images/hatun/trabaja_1Fixed.jpg" border="0" style="max-width: 100%; height: 100%;"/>
         <!--<div style="padding-top: 30px;">-->
             <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">SE PARTE DE NUESTRO EQUIPO,</div>-->
@@ -175,9 +179,26 @@
     <script>
 
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -196,7 +217,7 @@
             images.forEach(image => {
                 $('#'+image+'')
                     .width($(window).width().toString())
-                    .height($(window).height().toString());
+                    .height($(window).height().toString() - 72);
             });
         });
 

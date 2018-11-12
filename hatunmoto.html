@@ -78,14 +78,18 @@
    </header> <!-- /header -->
 
     <div class="home-scrolldown" style="display: none;">
-        <a href="#about" class="scroll-icon smoothscroll2" id="goToAbout">
+        <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
             <span>Scroll Down</span>
             <i class="icon-arrow-right" aria-hidden="true"></i>
         </a>
     </div>
 
+    <section id="blannk" style="height: 72px;">
+        this is a demo
+    </section>
+
     <section id="hatunmotoSection" class="hatunmotoSection">
-        <div style="padding-top: 130px;     display: flex;">
+        <div style="padding-top: 58px;     display: flex;">
             <div style="width:60%; line-height: 1;">
                 <img src="images/hatun/logo_hatunmoto2.png" style="    background-color: white;         width: 55%; opacity: 0.8; padding-left: 6%;"/>
                 <div class="hatunFont2 hatunCasaFontTitle" style="transform: scale(1.5,1);     padding-left: 23% !important; padding-top: 4% !important;">¡TU MOTO</div>
@@ -107,7 +111,7 @@
             </div>
         </div>
         <div class="home-scrolldown" style="right: 48% !important;">
-            <a href="#nosotros" class="scroll-icon smoothscroll2">
+            <a href="#nosotros" class="scroll-icon smoothscroll" id="hatunmotoPrincipal">
                 <img src="images/hatun/red_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
             </a>
         </div>
@@ -183,9 +187,26 @@
     <script src="js/jquery.rwdImageMaps.min.js"></script>
     <script>
         function goTo(section) {
-            $('#goToAbout')
-                .attr("href", "#" + section)
-                .click();
+            // $('#goToAbout')
+            //     .attr("href", "#" + section)
+            //     .click();
+
+            var cfg = {
+                scrollDuration : 800, // smoothscroll duration
+                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
+            };
+
+            var target = this.hash,
+                $target    = $('#'+section);
+
+            // e.preventDefault();
+            // e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 72
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
         }
 
         $(document).ready(function(e) {
@@ -203,13 +224,19 @@
                 goTo('contactenos');
             });
 
+            $('#hatunmotoPrincipal').on('click', function() {
+                goTo('nosotros');
+            });
+
             let images = ['nosotrosImage', 'beneficiosImage'];
 
             images.forEach(image => {
                 $('#'+image+'')
                     .width($(window).width().toString())
-                    .height($(window).height().toString());
+                    .height($(window).height().toString() - 72);
             });
+
+            $('#hatunmotoSection').height($('#hatunmotoSection').height() - 72);
         });
 
         function goToHome() {
