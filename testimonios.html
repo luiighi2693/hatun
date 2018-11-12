@@ -233,13 +233,15 @@
                     .height(($(window).height()-72).toString());
             });
 
-            $('#image1')
-                .width($('#video1').height())
-                .height($('#video1').height());
+            for (let i=0; i<3; i++) {
+                $('#image1')
+                    .width($('#video1').height())
+                    .height($('#video1').height());
 
-            $('#image2')
-                .width($('#video2').height())
-                .height($('#video2').height());
+                $('#image2')
+                    .width($('#video2').height())
+                    .height($('#video2').height());
+            }
         });
 
         function goToHome() {
