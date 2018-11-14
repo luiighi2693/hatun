@@ -1,0 +1,34 @@
+<header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
+
+    <div class="header-logo">
+        <a href="index.html"></a>
+    </div>
+
+    <nav id="header-nav-wrap">
+        <ul class="header-main-nav">
+            <li class="hatunFont"><a class="hatunFont"  href="home.html" title="home">INICIO</a></li>
+            <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
+            <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
+            <li id="dropDownParentList" class="current">
+                <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
+                    <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
+                    <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
+                </div>
+            </li>
+            <li class="hatunFont" id="creditMobile" style="display: none;"><a class="hatunFont"  href="creditos.html" title="contacto">CREDITOS</a></li>
+            <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
+        </ul>
+    </nav>
+
+    <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+</header>
+
+<script src="../js/plugins.js"></script>
+<script src="../js/main.js"></script>
+<script>
+    $('#dropdownMenuLink').on('mouseover', function() {
+        $('#dropDownParentList').addClass('open');
+    });
+</script>

@@ -1342,7 +1342,7 @@ h1.intro-header::before {
     right: auto;
     left: 0;
     background-color: #111111;
-    padding: 120px 40px 54px;
+    padding: 40px 40px 0px;
   }
   #header-nav-wrap .header-main-nav {
     display: block;
@@ -3053,4 +3053,13 @@ video {
 
 .hatunDropDown:hover{
   color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  .hatunCasaFontTitle {
+    font-size: 4rem;
+  }
+  .hatunCasaFontTitle2 {
+    font-size: 3.5rem;
+  }
 }

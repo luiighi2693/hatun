@@ -35,121 +35,36 @@
     <!-- CSS
    ================================================== -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <!--<script src="js/pace.min.js"></script>-->
 
     <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!--<script src="js/modernizr.js"></script>-->
 </head>
 
 <body id="top">
-
-    <!-- header 
-   ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
-
-   		<div class="header-logo">
-	        <a href="index.html"></a>
-	    </div>
-
-	   	<nav id="header-nav-wrap">
-			<ul class="header-main-nav">
-				<li class="current"><a class="smoothscroll hatunFont"  href="#" title="home">INICIO</a></li>
-                <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
-				<li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-                <li id="dropDownParentList" class="current">
-                    <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                        <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
-                        <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
-                    </div>
-                </li>
-                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
-			</ul>
-
-            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-		</nav>
-
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
-   </header> <!-- /header -->
-
-    <!--<div class="videoPreview" style="position: sticky; z-index: 501;">-->
-        <!--<video id="videoPreview" autoplay="autoplay">-->
-            <!--<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>-->
-        <!--</video>-->
-    <!--</div>-->
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div style="position: absolute;width: 100%;height: 100%;">
-                <!--<video id="videoPreview" autoplay>-->
-                    <!--<source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>-->
-                <!--</video>-->
-                <img id="imagePreview" src="images/hatun/intro_3.gif" style="height: auto; width: 100%">
-            </div>
-            <div class="hatunVideoButton">
-                <button id="hideGiffButton" class="hatunFont" style="font-size: 1em; border: 1px solid; border-radius: 0; background-color: transparent;
-                height: 3.4rem;line-height: calc(3.4rem - .6rem);padding: 0 3rem;">SALTAR</button>
-            </div>
-        </div>
-    </div>
+    <div id="headerComponent"></div>
 
     <div id="mainContent">
-        <div class="home-scrolldown" style="display: none;">
-            <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
-                <span>Scroll Down</span>
-                <i class="icon-arrow-right" aria-hidden="true"></i>
-            </a>
-        </div>
-
-        <!--<section id="home" data-parallax="scroll" data-image-src="images/hatun/foot_home.jpg">-->
-            <!--<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);">-->
-                <!--<p class="hatunFontSlogan hatunFontSize">-->
-                    <!--Para vivir mejor-->
-                <!--</p>-->
-            <!--</div>-->
-
-            <!--<div class="home-scrolldown" style="right: 45% !important; bottom: 12%; !important;">-->
-                <!--<a href="#aboutUs" class="scroll-icon smoothscroll">-->
-                    <!--<img src="images/hatun/yellow_row.png" width="30px" height="30px" style="transform: rotate(30deg);">-->
-                <!--</a>-->
-            <!--</div>-->
-
-        <!--</section> &lt;!&ndash; end home &ndash;&gt;-->
-
-        <section id="blannk" style="height: 72px;">
+        <section id="blank" style="height: 72px;">
             this is a demo
         </section>
 
         <section id="home1" style="background-color: black;">
             <div style="display: flex;">
-                <!--<div style="position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%); z-index: 1">-->
-                    <!--<p class="hatunFontSlogan hatunFontSize">-->
-                        <!--Para vivir mejor-->
-                    <!--</p>-->
-                <!--</div>-->
-
                 <img name="homeImage" src="images/hatun/para-vivir-mejor.jpg" width="2500" height="1080" border="0" id="homeImage" usemap="#m_homeImage" alt="" style="max-width: 100%; height: auto;"/>
-                <!--<map name="m_homeImage" id="m_homeImage">
-                    <area id="homeArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="About" alt="About" />
-                </map>-->
+
                 <div class="home-scrolldown" style="right: 48% !important;">
                     <a href="#aboutUs" class="scroll-icon smoothscroll" id="homeArea">
                         <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
                     </a>
                 </div>
             </div>
-        </section> <!-- end home -->
+        </section>
 
         <section id="aboutUs" style="background-color: black;">
             <div style="display: flex;">
@@ -178,184 +93,73 @@
             </div>
         </section>
 
-        <!--<section id="valores" style="background-color: black;">-->
-            <!--<div style="display: flex;">-->
-                <!--<img name="valoresImage" src="images/hatun/valores_830.jpg" width="1400" height="992" border="0" id="valoresImage" usemap="#m_valoresImage" alt="" style="width: 100%; height: auto;"/>-->
-                <!--<map name="m_valoresImage" id="m_valoresImage">-->
-                    <!--<area id="valoresArea" shape="poly" title="Mision" alt="Mision" />-->
-                <!--</map>-->
-            <!--</div>-->
-        <!--</section>-->
-
         <section id="valores" style="background-color: black;">
             <div style="display: flex;">
                 <img name="valoresImage" src="images/hatun/valores_beneficios.jpg" width="2500" height="1400" border="0" id="valoresImage" alt="" style="width: 100%; height: auto;"/>
             </div>
         </section>
-
-        <!--<section id="valores" style="background-color: black;">-->
-            <!--<div class="features-list block-1-3 block-m-1-2 block-mob-full group" style="line-height: 0;">-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/valores.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/foto_1.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/foto_2.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/foto_3.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/beneficios.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-                <!--<div class="bgrid feature aos-init aos-animate" data-aos="fade-up" style="padding: 0;">-->
-                    <!--<img src="images/hatun/valores/foto_4.jpg" style="width: 100%; height: auto;">-->
-                <!--</div>-->
-
-
-            <!--</div>-->
-        <!--</section>-->
     </div>
 
-    <!--<div id="preloader">-->
-    	<!--<div id="loader"></div>-->
-    <!--</div>-->
+    <div id="footerComponent"></div>
 
-    <footer style="padding-top: 4rem; background-color: #111111;">
-        <div class="footer-main">
-            <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
-                <div class="col-three md-1-6 tab-full footer-info">
-                    <div class="footer-logo" onclick="goToHome()" style="margin-bottom: 10px;"></div>
-                    <div style="    line-height: 2rem;">
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Av. Tomas Marsano # 2813 Int. 603</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Santiago de Surco. Lima - Per&uacute;</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;"> <i class="fa fa-phone"></i>&nbsp;&nbsp;(01)&nbsp;4480689</span>
-                    </div>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="marcas.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">MARCAS</h4></a>
-                    <a href="hatunsol.html"><h5 class="hatunFont" style="color: white !important;">HATUNSOL</h5></a>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNCASA</h5>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNMOTO</h5>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="creditos.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">CRÉDITOS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">SEGUIMIENTO</h5>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="contacto.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">TRABAJA CON NOSOTROS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">CONTACTO</h5>
-                </div>
-
-                <div class="col-three md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">LIBRO DE RECLAMACIONES</h4>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Java Script
-    ================================================== -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
-        function goTo(section) {
-            // $('#goToAbout')
-            //     .attr("href", "#" + section)
-            //     .click();
-
-            var cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
-            };
-
-            var target = this.hash,
-                $target    = $('#'+section);
-
-            // e.preventDefault();
-            // e.stopPropagation();
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 72
-            }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
-            });
-        }
 
         $(document).ready(function(e) {
-            $('#dropdownMenuLink').on('mouseover', function() {
-                $('#dropDownParentList').addClass('open');
-            });
-
-            $('img[usemap]').rwdImageMaps();
-
-            $('#homeArea').on('click', function() {
-                goTo('aboutUs');
-            });
-
-            $('#aboutArea').on('click', function() {
-                goTo('mision');
-            });
-
-            $('#misionArea').on('click', function() {
-                goTo('vision');
-            });
-
-            $('#visionArea').on('click', function() {
-                goTo('valores');
-            });
-
-            if (localStorage.getItem("goHome") === null) {
-                localStorage.setItem("goHome", "false");
-            } else {
-              if (localStorage.getItem("goHome") === 'true'){
-                  $('#myModal').css('display', 'none');
-                  localStorage.setItem("goHome", "false");
-              }
-            }
-
+            $('#headerComponent').load('components/header.html');
+            $('#footerComponent').load('components/footer.html');
 
             let images = ['homeImage', 'aboutImage', 'misionImage', 'visionImage'];
 
-            images.forEach(image => {
-                $('#'+image+'')
+            if (checkIfMobile()){
+                console.log('mobile on');
+
+                $('.home-scrolldown').css('display', 'none');
+
+                images.push('valoresImage');
+                images.forEach(image => {
+                    $('#'+image+'')
+                        .height( ( ($('#'+image+'').width() / 2500) * 100 *1080) / 100 );
+                });
+
+                $('#blank').height(40);
+
+                $('#dropDownParentList').css('display', 'none');
+                $('#creditMobile').css('display', 'block');
+            } else {
+                $('img[usemap]').rwdImageMaps();
+
+                $('#homeArea').on('click', function() {
+                    goTo('aboutUs');
+                });
+
+                $('#aboutArea').on('click', function() {
+                    goTo('mision');
+                });
+
+                $('#misionArea').on('click', function() {
+                    goTo('vision');
+                });
+
+                $('#visionArea').on('click', function() {
+                    goTo('valores');
+                });
+
+                images.forEach(image => {
+                    $('#'+image+'')
+                        .width($(window).width().toString())
+                        .height($(window).height().toString() - 72);
+                });
+
+                $('#valoresImage')
                     .width($(window).width().toString())
-                    .height($(window).height().toString() - 72);
-            });
-
-            $('#valoresImage')
-                .width($(window).width().toString())
-                .height( ($(window).height() + 70).toString());
+                    .height( ($(window).height() + 70).toString());
+            }
         });
 
-        // $('#imagePreview').on('ended', function(e) {
-        //     $('#myModal').css('display', 'none');
-        // });
-
-        $('#hideGiffButton').on('click', function() {
-            // $('#imagePreview')[0].pause();
-            $('#myModal').css('display', 'none');
-        });
-
-        function goToHome() {
-            localStorage.setItem("goHome", "true");
-            window.location = 'index.html'
-        }
     </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
 </body>
 </html>

@@ -68,6 +68,7 @@
                        <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
                    </div>
                </li>
+               <li class="hatunFont" id="creditMobile" style="display: none;"><a class="hatunFont"  href="creditos.html" title="contacto">CREDITOS</a></li>
                <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
            </ul>
            <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
@@ -84,12 +85,12 @@
         </a>
     </div>
 
-    <section id="blannk" style="height: 72px;">
+    <section id="blank" style="height: 72px;">
         this is a demo
     </section>
 
     <section id="hatuncasaSection" class="hatuncasaSection">
-        <div style="padding-top: 58px;     display: flex;">
+        <div style="padding-top: 58px;     display: flex;" id="mainBlock">
             <div style="width:60%; line-height: 1; margin-top: -26px; ">
                 <!--<img src="images/hatun/Logo_hatuncasa.png" style="    background-color: white;width: 40%;opacity: 0.8;padding-left: 8%;padding-right: 3%;"/>-->
                 <!--<div class="hatunFont4 hatunCasaFontTitle" style="transform: scale(1.2,1.2);     padding-left: 16% !important; padding-top: 4% !important;">AMPL&Iacute;A,</div>-->
@@ -99,14 +100,14 @@
                 <a href="#" style="display: none;"><img src="images/hatun/registrateYaCasa.png" style="    width: 35%; padding-left: 10%; padding-top: 4%;"/></a>
             </div>
             <div style="width: 50%; padding-left: 10%;">
-                <div style="width:80%;     background-color: #151515; height: 114%; opacity: 0.9; border-radius: 15px;">
-                    <div class="hatunFont2 hatunCasaFontTitle" style="    font-size: 3rem; text-align: center; padding-top: 5%; padding-left: 0; letter-spacing: 2px;">OBT&Eacute;N TU CR&Eacute;DITO YA!</div>
-                    <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;"/>
-                    <input type="email" placeholder="EMAIL" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
-                    <input type="text" placeholder="CELULAR" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
-                    <input type="text" placeholder="OBRA" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
-                    <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;">Un asesor se comunicar&aacute; contigo lo m&aacute;s</div>
-                    <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;     line-height: 0.7;">pronto posible</div>
+                <div style="width:80%;     background-color: #151515; height: 114%; opacity: 0.9; border-radius: 15px;" id="mainForm">
+                    <div id="formTitle" class="hatunFont2 hatunCasaFontTitle" style="    font-size: 3rem; text-align: center; padding-top: 5%; padding-left: 0; letter-spacing: 2px;">OBT&Eacute;N TU CR&Eacute;DITO YA!</div>
+                    <input class="formInput" type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;"/>
+                    <input class="formInput" type="email" placeholder="EMAIL" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
+                    <input class="formInput" type="text" placeholder="CELULAR" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
+                    <input class="formInput" type="text" placeholder="OBRA" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>
+                    <div class="hatunFont3 hatunCasaFontTitle extraCommentForm" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;">Un asesor se comunicar&aacute; contigo lo m&aacute;s</div>
+                    <div class="hatunFont3 hatunCasaFontTitle extraCommentForm" style="    font-size: 1.4rem; text-align: center; padding-left: 0px;     line-height: 0.7;">pronto posible</div>
                     <a href="#"><img src="images/hatun/hatuncasaRegistraTusDatos.png" style="    width: 60%; text-align: center; padding-top: 4%; margin-left: auto; margin-right: auto; display: block;"/></a>
                 </div>
             </div>
@@ -238,11 +239,41 @@
             });
 
             $('#hatuncasaSection').height($('#hatuncasaSection').height() - 72);
+
+            if (checkIfMobile()){
+                console.log('mobile on');
+
+                $('.home-scrolldown').css('display', 'none');
+
+                images.forEach(image => {
+                    $('#'+image+'')
+                        .height( ( ($('#'+image+'').width() / 2500) * 100 *1080) /100 + 100 );
+                });
+
+                $('#blank').height(40);
+
+                $('#dropDownParentList').css('display', 'none');
+                $('#creditMobile').css('display', 'block');
+                $('#mainBlock').css('padding-top', '40px');
+                $('#formTitle').css('font-size', '1rem');
+                $('.formInput')
+                    .css('height', '1rem')
+                    .css('padding', '1rem 1rem')
+                    .css('font-size', '1rem');
+                $('.extraCommentForm').css('font-size', '0.7rem');
+                $('#mainForm').css('height', '108%');
+
+                $('#hatuncasaSection').height( ( ($('#hatuncasaSection').width() / 2500) * 100 *1080) /100 + 100 )
+            }
         });
 
         function goToHome() {
             localStorage.setItem("goHome", "true");
             window.location = 'index.html'
+        }
+
+        function checkIfMobile() {
+            return $('html body').width() <= 768;
         }
     </script>
     <script src="js/plugins.js"></script>

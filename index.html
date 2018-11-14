@@ -65,71 +65,16 @@
 <script src="js/jquery-2.1.3.min.js"></script>
 <script src="js/jquery.rwdImageMaps.min.js"></script>
 <script>
-    function goTo(section) {
-        $('#goToAbout')
-            .attr("href", "#" + section)
-            .click();
-    }
-
     $(document).ready(function(e) {
-        $('#dropdownMenuLink').on('mouseover', function() {
-            $('#dropDownParentList').addClass('open');
-        });
-
-        $('img[usemap]').rwdImageMaps();
-
-        $('#homeArea').on('click', function() {
-            goTo('aboutUs');
-        });
-
-        $('#aboutArea').on('click', function() {
-            goTo('mision');
-        });
-
-        $('#misionArea').on('click', function() {
-            goTo('vision');
-        });
-
-        $('#visionArea').on('click', function() {
-            goTo('valores');
-        });
-
-        if (localStorage.getItem("goHome") === null) {
-            localStorage.setItem("goHome", "false");
-        } else {
-            if (localStorage.getItem("goHome") === 'true'){
-                $('#myModal').css('display', 'none');
-                localStorage.setItem("goHome", "false");
-            }
+        if ($('#imagePreview').height() < $('html body').height()) {
+            $('#imagePreview').css('height', '100%');
         }
-
-
-        let images = ['homeImage', 'aboutImage', 'misionImage', 'visionImage'];
-
-        images.forEach(image => {
-            $('#'+image+'')
-                .width($(window).width().toString())
-                .height($(window).height().toString());
-        });
-
-        $('#valoresImage')
-            .width($(window).width().toString())
-            .height( ($(window).height() + 70).toString());
     });
 
-    // $('#imagePreview').on('ended', function(e) {
-    //     $('#myModal').css('display', 'none');
-    // });
-
     $('#hideGiffButton').on('click', function() {
-        // $('#imagePreview')[0].pause();
         window.location = 'home.html'
     });
 
-    function goToHome() {
-        localStorage.setItem("goHome", "true");
-        window.location = 'index.html'
-    }
 </script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
