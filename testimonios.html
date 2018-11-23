@@ -7,14 +7,14 @@
 
 <head>
 
-<script>
-    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    // })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
-    // ga('create', 'UA-3920997-4', 'auto');
-    // ga('send', 'pageview');
-</script>
+    <script>
+        // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        // })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
+        // ga('create', 'UA-3920997-4', 'auto');
+        // ga('send', 'pageview');
+    </script>
 
 
     <meta charset="utf-8">
@@ -30,14 +30,8 @@
     <!-- CSS
    ================================================== -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <!--<script src="js/pace.min.js"></script>-->
 
     <!-- favicons
 	================================================== -->
@@ -47,43 +41,9 @@
 </head>
 
 <body id="top">
+<div id="headerComponent"></div>
 
-    <!-- header 
-   ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
-
-    <div class="header-logo">
-        <a href="index.html"></a>
-    </div>
-
-       <nav id="header-nav-wrap">
-           <ul class="header-main-nav">
-               <li><a class="hatunFont" href="home.html" title="home">INICIO</a></li>
-               <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
-               <li class="current"><a class="hatunFont"  href="#" title="pricing">TESTIMONIOS</a></li>
-               <li id="dropDownParentList" class="current">
-                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
-                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
-                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
-                   </div>
-               </li>
-               <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
-           </ul>
-           <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-       </nav>
-
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
-   </header> <!-- /header -->
-
-    <div class="home-scrolldown" style="display: none;">
-        <a href="#about" class="scroll-icon smoothscroll" id="goToAbout">
-            <span>Scroll Down</span>
-            <i class="icon-arrow-right" aria-hidden="true"></i>
-        </a>
-    </div>
-
+<div id="mainContent">
     <section id="blannk" style="height: 72px;">
         this is a demo
     </section>
@@ -93,13 +53,10 @@
             <img name="brindamosImage" src="images/hatun/testimonios.jpg" width="2500" height="1080" border="0" id="brindamosImage" alt="" style="width: 100%; height: auto;"/>
 
             <div class="home-scrolldown" style="right: 48% !important;">
-                <a href="#testimonios" class="scroll-icon smoothscroll" id="brindamosArea">
+                <a href="#testimonios" class="scroll-icon" id="brindamosArea">
                     <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
                 </a>
             </div>
-            <!--<map name="m_brindamosImage" id="m_brindamosImage">-->
-                <!--<area id="brindamosArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Nosotros" alt="Nosotros" />-->
-            <!--</map>-->
         </div>
     </section>
 
@@ -140,119 +97,53 @@
                     </div>
                 </div>
                 <div style="width: 100%; margin-bottom: 5%;">
-                    <img src="images/hatun/nombre_testimonios2.jpg" style="width: 55%;">
+                    <img src="images/hatun/testimonioTexto2.png" style="width: 57%;">
                 </div>
             </div>
         </div>
     </section>
+</div>
 
-    <footer style="padding-top: 4rem; background-color: #111111;">
-        <div class="footer-main">
-            <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
-                <div class="col-three md-1-6 tab-full footer-info">
-                    <div class="footer-logo" onclick="goToHome()" style="margin-bottom: 10px;"></div>
-                    <div style="    line-height: 2rem;">
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Av. Tomas Marsano # 2813 Int. 603</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Santiago de Surco. Lima - Per&uacute;</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;"> <i class="fa fa-phone"></i>&nbsp;&nbsp;(01)&nbsp;4480689</span>
-                    </div>
-                </div>
+<div id="footerComponent"></div>
 
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="marcas.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">MARCAS</h4></a>
-                    <a href="hatunsol.html"><h5 class="hatunFont" style="color: white !important;">HATUNSOL</h5></a>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNCASA</h5>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNMOTO</h5>
-                </div>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    $(document).ready(function(e) {
+        $('#headerComponent').load('components/header.html');
+        $('#footerComponent').load('components/footer.html');
 
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="creditos.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">CRÉDITOS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">SEGUIMIENTO</h5>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="contacto.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">TRABAJA CON NOSOTROS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">CONTACTO</h5>
-                </div>
-
-                <div class="col-three md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">LIBRO DE RECLAMACIONES</h4>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="preloader">
-    	<div id="loader"></div>
-    </div>
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/jquery.rwdImageMaps.min.js"></script>
-    <script>
-        function goTo(section) {
-            // $('#goToAbout')
-            //     .attr("href", "#" + section)
-            //     .click();
-
-            var cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
-            };
-
-            var target = this.hash,
-                $target    = $('#'+section);
-
-            // e.preventDefault();
-            // e.stopPropagation();
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 72
-            }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
-            });
-        }
-
-        $(document).ready(function(e) {
-            $('#dropdownMenuLink').on('mouseover', function() {
-                $('#dropDownParentList').addClass('open');
-            });
-
-            $('img[usemap]').rwdImageMaps();
-
-            $('#brindamosArea').on('click', function() {
-                goTo('testimonios');
-            });
-
-            let images = ['brindamosImage'];
-
-            images.forEach(image => {
-                $('#'+image+'')
-                    .width($(window).width().toString())
-                    .height(($(window).height()-72).toString());
-            });
-
-            for (let i=0; i<3; i++) {
-                $('#image1')
-                    .width($('#video1').height())
-                    .height($('#video1').height());
-
-                $('#image2')
-                    .width($('#video2').height())
-                    .height($('#video2').height());
-            }
+        $('#dropdownMenuLink').on('mouseover', function() {
+            $('#dropDownParentList').addClass('open');
         });
 
-        function goToHome() {
-            localStorage.setItem("goHome", "true");
-            window.location = 'index.html'
+        $('img[usemap]').rwdImageMaps();
+
+        $('#brindamosArea').on('click', function() {
+            goTo('testimonios');
+        });
+
+        let images = ['brindamosImage'];
+
+        images.forEach(image => {
+            $('#'+image+'')
+                .width($(window).width().toString())
+                .height(($(window).height()-72).toString());
+        });
+
+        for (let i=0; i<3; i++) {
+            $('#image1')
+                .width($('#video1').height())
+                .height($('#video1').height());
+
+            $('#image2')
+                .width($('#video2').height())
+                .height($('#video2').height());
         }
-    </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    });
+</script>
 
 </body>
 

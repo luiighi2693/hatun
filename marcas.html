@@ -30,14 +30,8 @@
     <!-- CSS
    ================================================== -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <!--<script src="js/pace.min.js"></script>-->
 
     <!-- favicons
 	================================================== -->
@@ -48,34 +42,7 @@
 
 <body id="top">
 
-    <!-- header 
-   ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
-
-       <div class="header-logo">
-           <a href="index.html"></a>
-       </div>
-
-       <nav id="header-nav-wrap">
-           <ul class="header-main-nav">
-               <li><a class="hatunFont" href="home.html" title="home">INICIO</a></li>
-               <li class="current"><a href="#" title="Marks" class="smoothscroll hatunFont">MARCAS</a></li>
-               <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li id="dropDownParentList" class="current">
-                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
-                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
-                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
-                   </div>
-               </li>
-               <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
-           </ul>
-           <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-       </nav>
-
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
-   </header> <!-- /header -->
+<div id="headerComponent"></div>
 
     <section id="marks" style="background-color: black; height: 100%;">
         <div>
@@ -91,16 +58,14 @@
         </div>
     </section>
 
-    <div id="preloader">
-    	<div id="loader"></div>
-    </div>
-
-    <!-- Java Script
-    ================================================== -->
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script>
         $(document).ready(function(e) {
+            $('#headerComponent').load('components/header.html');
+
             $('#dropdownMenuLink').on('mouseover', function() {
                 $('#dropDownParentList').addClass('open');
             });
@@ -152,10 +117,6 @@
             window.location = 'index.html'
         }
     </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
 
 </body>
 

@@ -30,14 +30,8 @@
     <!-- CSS
    ================================================== -->
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-
-    <!-- script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <!--<script src="js/pace.min.js"></script>-->
 
     <!-- favicons
 	================================================== -->
@@ -48,42 +42,7 @@
 
 <body id="top">
 
-    <!-- header 
-   ================================================== -->
-   <header id="header" class="row" style="max-width: 100% !important; margin-left: 0 !important;">
-
-    <div class="header-logo">
-        <a href="index.html"></a>
-    </div>
-
-       <nav id="header-nav-wrap">
-           <ul class="header-main-nav">
-               <li><a class="hatunFont" href="home.html" title="home">INICIO</a></li>
-               <li class="hatunFont"><a href="marcas.html" title="Marks" class="hatunFont">MARCAS</a></li>
-               <li class="hatunFont"><a href="testimonios.html" title="pricing" class="hatunFont">TESTIMONIOS</a></li>
-               <li id="dropDownParentList" class="current">
-                   <a class="hatunFont dropdown-toggle"  href="#" title="testimonials" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRÉDITOS</a>
-                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="    top: 55px !important; background-color: #fcdc00; left: 220px;">
-                       <a id="solicitud" class="dropdown-item hatunFont hatunDropDown" href="creditos.html" style="text-decoration: none;">SOLICITUD</a>
-                       <a id="seguimiento" class="dropdown-item hatunFont hatunDropDown" href="creditos.html#tracking" style="padding-bottom: 5%; text-decoration: none;">SEGUIMIENTO</a>
-                   </div>
-               </li>
-               <li class="hatunFont" id="creditMobile" style="display: none;"><a class="hatunFont"  href="creditos.html" title="contacto">CREDITOS</a></li>
-               <li class="hatunFont"><a class="hatunFont"  href="contacto.html" title="contacto">TRABAJA CON NOSOTROS</a></li>
-           </ul>
-           <!--<a href="#" title="sign-up" class="button button-primary cta">Sign Up</a>-->
-       </nav>
-
-		<a class="header-menu-toggle" href="#"><span>Menu</span></a>    	
-   	
-   </header> <!-- /header -->
-
-    <div class="home-scrolldown" style="display: none;">
-        <a href="#about" class="scroll-icon smoothscroll2" id="goToAbout">
-            <span>Scroll Down</span>
-            <i class="icon-arrow-right" aria-hidden="true"></i>
-        </a>
-    </div>
+<div id="headerComponent"></div>
 
     <section id="blank" style="height: 72px;">
         this is a demo
@@ -113,7 +72,7 @@
             </div>
         </div>
         <div class="home-scrolldown" style="right: 48% !important;">
-            <a href="#nosotros" class="scroll-icon smoothscroll" id="hatuncasaPrincipal">
+            <a href="#nosotros" class="scroll-icon" id="hatuncasaPrincipal">
                 <img src="images/hatun/oraje_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
             </a>
         </div>
@@ -121,97 +80,24 @@
 
     <section id="nosotros" style="background-color: black;">
         <div style="display: flex;">
-            <img name="nosotrosImage" src="images/hatun/hatun_casa_info.jpg" width="1920" height="1007" border="0" id="nosotrosImage" usemap="#m_nosotrosImage" alt="" style="width: 100%; height: auto;"/>
+            <img name="nosotrosImage" src="images/hatun/hatuncasa_texto.jpg" width="2500" height="1080" border="0" id="nosotrosImage" usemap="#m_nosotrosImage" alt="" style="width: 100%; height: auto;"/>
             <map name="m_nosotrosImage" id="m_nosotrosImage">
                 <area id="nosotrosArea" shape="poly" coords="125,858,417,857,417,923,128,921" title="Nosotros" alt="Nosotros" />
             </map>
         </div>
     </section>
 
-    <!--<section id="beneficios" style="background-color: black;">-->
-        <!--<div style="display: flex;">-->
-            <!--<img name="beneficiosImage" src="images/hatun/hatunsol3_830.jpg" width="1400" height="830" border="0" id="beneficiosImage" usemap="#m_beneficiosImage" alt="" style="width: 100%; height: auto;"/>-->
-            <!--<map name="m_beneficiosImage" id="m_beneficiosImage">-->
-                <!--<area id="beneficiosArea" shape="poly" coords="689,741,725,743,713,776" title="Beneficios" alt="Beneficios" />-->
-            <!--</map>-->
-        <!--</div>-->
-    <!--</section>-->
+<div id="footerComponent"></div>
 
-    <!--<section id="contactenos" style="background-color: black;">-->
-        <!--<div style="display: flex;">-->
-            <!--<img name="contactenosImage" src="images/hatun/hatunsol4_830Fixed.jpg" width="1400" height="830" border="0" id="contactenosImage" alt="" style="width: 100%; height: auto;"/>-->
-        <!--</div>-->
-    <!--</section>-->
-
-    <footer style="padding-top: 4rem; background-color: #111111;">
-        <div class="footer-main">
-            <div class="row" style="max-width: 100%; margin-left: 6%; margin-right: 6%;">
-                <div class="col-three md-1-6 tab-full footer-info">
-                    <div class="footer-logo" onclick="goToHome()" style="margin-bottom: 10px;"></div>
-                    <div style="    line-height: 2rem;">
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Av. Tomas Marsano # 2813 Int. 603</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;">Santiago de Surco. Lima - Per&uacute;</span><br>
-                        <span class="hatunFont" style="color: white !important; font-size: 0.85em;"> <i class="fa fa-phone"></i>&nbsp;&nbsp;(01)&nbsp;4480689</span>
-                    </div>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="marcas.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">MARCAS</h4></a>
-                    <a href="hatunsol.html"><h5 class="hatunFont" style="color: white !important;">HATUNSOL</h5></a>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNCASA</h5>
-                    <h5 class="hatunFont" style="color: white !important;">HATUNMOTO</h5>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="creditos.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">CRÉDITOS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">SEGUIMIENTO</h5>
-                </div>
-
-                <div class="col-two md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <a href="contacto.html"><h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">TRABAJA CON NOSOTROS</h4></a>
-                    <h5 class="hatunFont" style="color: white !important;">CONTACTO</h5>
-                </div>
-
-                <div class="col-three md-1-6 tab-1-3 mob-full footer-contact" style="padding-top: 2.5%;">
-                    <h4 class="hatunFont" style="    padding-bottom: 5px !important; margin-bottom: 0 !important;">LIBRO DE RECLAMACIONES</h4>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <div id="preloader">
-    	<div id="loader"></div>
-    </div>
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery.rwdImageMaps.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/bootstrap.js"></script>
     <script>
-        function goTo(section) {
-            // $('#goToAbout')
-            //     .attr("href", "#" + section)
-            //     .click();
-
-            var cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'  // mailchimp url
-            };
-
-            var target = this.hash,
-                $target    = $('#'+section);
-
-            // e.preventDefault();
-            // e.stopPropagation();
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top - 72
-            }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
-            });
-        }
-
         $(document).ready(function(e) {
+            $('#headerComponent').load('components/header.html');
+            $('#footerComponent').load('components/footer.html');
+
             $('#dropdownMenuLink').on('mouseover', function() {
                 $('#dropDownParentList').addClass('open');
             });
@@ -267,19 +153,10 @@
             }
         });
 
-        function goToHome() {
-            localStorage.setItem("goHome", "true");
-            window.location = 'index.html'
-        }
-
         function checkIfMobile() {
             return $('html body').width() <= 768;
         }
     </script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
 </body>
 
 
