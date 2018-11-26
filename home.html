@@ -11,7 +11,7 @@
 
 <!-- OPL Demos Google Analytics -->
 <script>
-    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+// (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     // })(window,document,'script','../../../www.google-analytics.com/analytics.js','ga');
@@ -45,7 +45,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
     <div id="headerComponent"></div>
 
     <div id="mainContent">
@@ -106,57 +106,77 @@
     <script src="js/util.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+        let isResize = false;
+
+        function checkIfResize() {
+            if (isResize) {
+                let images = ['homeImage', 'aboutImage', 'misionImage', 'visionImage'];
+
+                if (checkIfMobile()){
+                    console.log('mobile on');
+
+                    $('.home-scrolldown').css('display', 'none');
+
+                    images.push('valoresImage');
+                    images.forEach(image => {
+                        $('#'+image+'')
+                            .height( ( ($('#'+image+'').width() / 2500) *1080));
+                    });
+
+                    $('#blank').height(40);
+
+                    $('#dropDownParentList').css('display', 'none');
+                    $('#creditMobile').css('display', 'inline-block');
+                } else {
+                    $('img[usemap]').rwdImageMaps();
+
+                    $('.home-scrolldown').css('display', 'block');
+
+                    images.forEach(image => {
+                        $('#'+image+'')
+                            .width($(window).width().toString())
+                            .height($(window).height().toString() - 72);
+                    });
+
+                    $('#valoresImage')
+                        .width($(window).width().toString())
+                        .height( ($(window).height() + 70).toString());
+
+                    $('#blank').height(72);
+                    $('#dropDownParentList').css('display', 'inline-block');
+                    $('#creditMobile').css('display', 'none');
+                }
+
+                isResize = false;
+            }
+        }
+
+        function resizeScreen() {
+            isResize = true;
+        }
 
         $(document).ready(function(e) {
             $('#headerComponent').load('components/header.html');
             $('#footerComponent').load('components/footer.html');
 
-            let images = ['homeImage', 'aboutImage', 'misionImage', 'visionImage'];
+            $('#homeArea').on('click', function() {
+                goTo('aboutUs');
+            });
 
-            if (checkIfMobile()){
-                console.log('mobile on');
+            $('#aboutArea').on('click', function() {
+                goTo('mision');
+            });
 
-                $('.home-scrolldown').css('display', 'none');
+            $('#misionArea').on('click', function() {
+                goTo('vision');
+            });
 
-                images.push('valoresImage');
-                images.forEach(image => {
-                    $('#'+image+'')
-                        .height( ( ($('#'+image+'').width() / 2500) * 100 *1080) / 100 );
-                });
+            $('#visionArea').on('click', function() {
+                goTo('valores');
+            });
 
-                $('#blank').height(40);
-
-                $('#dropDownParentList').css('display', 'none');
-                $('#creditMobile').css('display', 'block');
-            } else {
-                $('img[usemap]').rwdImageMaps();
-
-                $('#homeArea').on('click', function() {
-                    goTo('aboutUs');
-                });
-
-                $('#aboutArea').on('click', function() {
-                    goTo('mision');
-                });
-
-                $('#misionArea').on('click', function() {
-                    goTo('vision');
-                });
-
-                $('#visionArea').on('click', function() {
-                    goTo('valores');
-                });
-
-                images.forEach(image => {
-                    $('#'+image+'')
-                        .width($(window).width().toString())
-                        .height($(window).height().toString() - 72);
-                });
-
-                $('#valoresImage')
-                    .width($(window).width().toString())
-                    .height( ($(window).height() + 70).toString());
-            }
+            isResize = true;
+            setInterval(checkIfResize, 1000);
         });
 
     </script>

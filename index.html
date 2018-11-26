@@ -44,7 +44,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
 <div style="position: absolute;width: 100%;height: 100%;">
     <img id="imagePreview" src="images/hatun/intro_3.gif" style="height: auto; width: 100%">
 </div>
@@ -60,10 +60,25 @@
 <script src="js/util.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
-    $(document).ready(function(e) {
-        if ($('#imagePreview').height() < $('html body').height()) {
-            $('#imagePreview').css('height', '100%');
+    let isResize = false;
+
+    function checkIfResize() {
+        if (isResize) {
+            if ($('#imagePreview').height() < $('html body').height()) {
+                $('#imagePreview').css('height', '100%');
+            }
+
+            isResize = false;
         }
+    }
+
+    function resizeScreen() {
+        isResize = true;
+    }
+
+    $(document).ready(function(e) {
+        isResize = true;
+        setInterval(checkIfResize, 1000);
     });
 
     $('#hideGiffButton').on('click', function() {

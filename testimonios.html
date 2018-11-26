@@ -111,6 +111,18 @@
 <script src="js/util.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
+    function resizeImages() {
+        for (let i=0; i<3; i++) {
+            $('#image1')
+                .width($('#video1').height())
+                .height($('#video1').height());
+
+            $('#image2')
+                .width($('#video2').height())
+                .height($('#video2').height());
+        }
+    }
+
     $(document).ready(function(e) {
         $('#headerComponent').load('components/header.html');
         $('#footerComponent').load('components/footer.html');
@@ -133,15 +145,7 @@
                 .height(($(window).height()-72).toString());
         });
 
-        for (let i=0; i<3; i++) {
-            $('#image1')
-                .width($('#video1').height())
-                .height($('#video1').height());
-
-            $('#image2')
-                .width($('#video2').height())
-                .height($('#video2').height());
-        }
+        setTimeout(resizeImages, 1500);
     });
 </script>
 
