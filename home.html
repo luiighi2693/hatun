@@ -117,11 +117,15 @@
 
                     $('.home-scrolldown').css('display', 'none');
 
-                    images.push('valoresImage');
+                    // images.push('valoresImage');
                     images.forEach(image => {
                         $('#'+image+'')
                             .height( ( ($('#'+image+'').width() / 2500) *1080));
                     });
+
+                    $('#valoresImage')
+                        // .width($(window).width().toString())
+                        .height( ( ($('#valoresImage').width() / 2500) *1080) + 170);
 
                     $('#blank').height(40);
 

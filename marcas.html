@@ -40,16 +40,20 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
 
 <div id="headerComponent"></div>
 
+<section id="blank" style="height: 72px;">
+    this is a demo
+</section>
+
     <section id="marks" style="background-color: black; height: 100%;">
-        <div>
-            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol_1.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto;"/>
-            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage1" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
-            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatuncasa.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage2" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
-            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunmoto.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage3" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: auto; display: none;"/>
+        <div style="height: 100%">
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol_1.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage1" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatuncasa.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage2" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunmoto.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage3" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%; display: none;"/>
             <map name="m_marcas_hatunsolImage" id="m_marcas_hatunsolImage">
                 <area id="marcas_hatunsolAreaA" shape="poly" coords="454,264,6,526,454,790" href="javascript:;" />
                 <area id="marcas_hatunsolAreaB" shape="poly" coords="491,305,493,824,928,571" href="javascript:;" alt="" />
@@ -63,6 +67,28 @@
     <script src="js/util.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+        let isResize = false;
+
+        function checkIfResize() {
+            if (isResize) {
+                if (checkIfMobile()){
+                    console.log('mobile on');
+                    $('#blank').height(40);
+                    $('#dropDownParentList').css('display', 'none');
+                    $('#creditMobile').css('display', 'inline-block');
+                } else {
+                    $('#blank').height(72);
+                    $('#dropDownParentList').css('display', 'inline-block');
+                    $('#creditMobile').css('display', 'none');
+                }
+                isResize = false;
+            }
+        }
+
+        function resizeScreen() {
+            isResize = true;
+        }
+
         $(document).ready(function(e) {
             $('#headerComponent').load('components/header.html');
 
@@ -110,12 +136,10 @@
                     $('#marcas_hatunsolImage').css('display', 'block');
                     $('#marcas_hatunsolImage3').css('display', 'none');
                 });
-        });
 
-        function goToHome() {
-            localStorage.setItem("goHome", "true");
-            window.location = 'index.html'
-        }
+            isResize = true;
+            setInterval(checkIfResize, 1000);
+        });
     </script>
 
 </body>
