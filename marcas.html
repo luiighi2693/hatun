@@ -49,7 +49,7 @@
 </section>
 
     <section id="marks" style="background-color: black; height: 100%;">
-        <div style="height: 100%">
+        <div style="height: 100%" id="webImages">
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol_1.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%;"/>
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatunsol.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage1" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%; display: none;"/>
             <img name="marcas_hatunsolImage" src="images/hatun/marcas_hatuncasa.jpg" width="1920" height="1080" border="0" id="marcas_hatunsolImage2" usemap="#m_marcas_hatunsolImage" alt="" style="max-width: 100%; height: 100%; display: none;"/>
@@ -58,6 +58,18 @@
                 <area id="marcas_hatunsolAreaA" shape="poly" coords="454,264,6,526,454,790" href="javascript:;" />
                 <area id="marcas_hatunsolAreaB" shape="poly" coords="491,305,493,824,928,571" href="javascript:;" alt="" />
                 <area id="marcas_hatunsolAreaC" shape="poly" coords="1434,302,992,561,1442,827" href="javascript:;" alt="" />
+            </map>
+        </div>
+
+        <div style="" id="mobileImages">
+            <img name="marcas_hatunsolImage" src="images/hatun/marcas_resp.jpg" width="768" height="1024" border="0" id="marcas_hatunsolImageResponsive" usemap="#m_marcas_hatunsolImageResponsive" alt="" style="max-width: 100%; height: 100%;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/hatunsol_resp.jpg" width="768" height="1024" border="0" id="marcas_hatunsolImage1Responsive" usemap="#m_marcas_hatunsolImageResponsive" alt="" style="max-width: 100%; height: 100%; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/hatuncasa_resp.jpg" width="768" height="1024" border="0" id="marcas_hatunsolImage2Responsive" usemap="#m_marcas_hatunsolImageResponsive" alt="" style="max-width: 100%; height: 100%; display: none;"/>
+            <img name="marcas_hatunsolImage" src="images/hatun/hatunmoto_resp.jpg" width="768" height="1024" border="0" id="marcas_hatunsolImage3Responsive" usemap="#m_marcas_hatunsolImageResponsive" alt="" style="max-width: 100%; height: 100%; display: none;"/>
+            <map name="m_marcas_hatunsolImageResponsive" id="m_marcas_hatunsolImageResponsive">
+                <area id="marcas_hatunsolAreaAResponsive" shape="poly" coords="2,327,372,115,374,544" href="javascript:;" />
+                <area id="marcas_hatunsolAreaBResponsive" shape="poly" coords="398,118,403,537,758,325" href="javascript:;" alt="" />
+                <area id="marcas_hatunsolAreaCResponsive" shape="poly" coords="9,782,367,567,377,984" href="javascript:;" alt="" />
             </map>
         </div>
     </section>
@@ -75,11 +87,17 @@
                     console.log('mobile on');
                     $('#blank').height(40);
                     $('#dropDownParentList').css('display', 'none');
+                    $('#webImages').css('display', 'none');
+                    $('#mobileImages').css('display', 'inline-block');
                     $('#creditMobile').css('display', 'inline-block');
+                    $('#footerExtraContent').css('display', 'none');
                 } else {
                     $('#blank').height(72);
                     $('#dropDownParentList').css('display', 'inline-block');
+                    $('#webImages').css('display', 'inline-block');
+                    $('#mobileImages').css('display', 'none');
                     $('#creditMobile').css('display', 'none');
+                    $('#footerExtraContent').css('display', 'block');
                 }
                 isResize = false;
             }
@@ -135,6 +153,45 @@
                 .mouseleave(function() {
                     $('#marcas_hatunsolImage').css('display', 'block');
                     $('#marcas_hatunsolImage3').css('display', 'none');
+                });
+
+            $('#marcas_hatunsolAreaAResponsive')
+                .on('click', function() {
+                    window.location = 'hatunsol.html';
+                })
+                .mouseenter(function() {
+                    $('#marcas_hatunsolImage1Responsive').css('display', 'block');
+                    $('#marcas_hatunsolImageResponsive').css('display', 'none');
+                })
+                .mouseleave(function() {
+                    $('#marcas_hatunsolImageResponsive').css('display', 'block');
+                    $('#marcas_hatunsolImage1Responsive').css('display', 'none');
+                });
+
+            $('#marcas_hatunsolAreaBResponsive')
+                .on('click', function() {
+                    window.location = 'hatuncasa.html';
+                })
+                .mouseenter(function() {
+                    $('#marcas_hatunsolImage2Responsive').css('display', 'block');
+                    $('#marcas_hatunsolImageResponsive').css('display', 'none');
+                })
+                .mouseleave(function() {
+                    $('#marcas_hatunsolImageResponsive').css('display', 'block');
+                    $('#marcas_hatunsolImage2Responsive').css('display', 'none');
+                });
+
+            $('#marcas_hatunsolAreaCResponsive')
+                .on('click', function() {
+                    window.location = 'hatunmoto.html';
+                })
+                .mouseenter(function() {
+                    $('#marcas_hatunsolImage3Responsive').css('display', 'block');
+                    $('#marcas_hatunsolImageResponsive').css('display', 'none');
+                })
+                .mouseleave(function() {
+                    $('#marcas_hatunsolImageResponsive').css('display', 'block');
+                    $('#marcas_hatunsolImage3Responsive').css('display', 'none');
                 });
 
             isResize = true;

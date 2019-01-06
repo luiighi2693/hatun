@@ -589,6 +589,14 @@ textarea {
   .tab-full {
     width: 100%;
   }
+
+  .hatunFontCustom {
+    font-size: 2rem !important;
+  }
+
+  .hatunFont3 {
+    font-size: 1.5rem !important;
+  }
 }
 
 
@@ -901,6 +909,11 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+.flechas{
+  position: absolute;
+  top: 50%
 }
 
 

@@ -31,8 +31,8 @@
    ================================================== -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all"/>
     <link rel="stylesheet" href="css/bootstrap.css">
-
     <!-- favicons
 	================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -49,14 +49,45 @@
     </section>
 
     <section id="equipo" style="background-color: black;">
-        <div style="display: flex;">
-            <img name="equipoImage" src="images/hatun/trabaja_con_nosotros.jpg" width="2500" height="1080" border="0" id="equipoImage" alt="" style="width: 100%; height: auto;"/>
-
-            <div class="home-scrolldown" style="right: 48% !important;">
-                <a href="#contacto" class="scroll-icon" id="equipoArea">
-                    <img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">
+        <div>
+            <!--<img name="equipoImage" src="images/hatun/trabaja_con_nosotros.jpg" width="2500" height="1080" border="0" id="equipoImage" alt="" style="width: 100%; height: auto;"/>-->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="images/hatun/carrusel_1.jpg" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/hatun/carrusel_2.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/hatun/carrusel_3.jpg" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <img src="images/hatun/carrusel_4.jpg" alt="Four slide">
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="flechas"><img src="images/flecha_izq1.png" class="arrowCarousel"></span>
                 </a>
-            </div>
+                <a class="right carousel-control right-carousel-control-responsive" href="#carousel-example-generic" data-slide="next">
+                    <span class="flechas"><img src="images/flecha_der1.png" class="arrowCarousel"></span>
+                </a>
+            </div><!-- /carousel -->
+
+            <!--<div class="home-scrolldown" style="right: 48% !important;">-->
+                <!--<a href="#contacto" class="scroll-icon" id="equipoArea">-->
+                    <!--<img src="images/hatun/yellow_row.png" width="25px" height="25px" style="transform: rotate(30deg);">-->
+                <!--</a>-->
+            <!--</div>-->
             <!--<map name="m_equipoImage" id="m_equipoImage">-->
                 <!--<area id="equipoArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Equipo" alt="Equipo" />-->
             <!--</map>-->
@@ -64,7 +95,12 @@
     </section>
 
     <section id="contacto" class="contactoWithoutForm">
-        <img name="marcas_hatunsolImage" id="mejorEquipo" src="images/hatun/texto_trabaja.png" border="0" style="max-width: 100%; height: 100%;width: 55%;margin-top: 1%;"/>
+        <!--<img name="marcas_hatunsolImage" id="mejorEquipo" src="images/hatun/texto_trabaja.png" border="0" style="max-width: 100%; height: 100%;width: 55%;margin-top: 1%;"/>-->
+        <p class="hatunFontCustom" style="width: 100%; height: auto; color: black !important; font-size: 3.5rem;line-height: initial;
+                    padding-top: 5%;padding-left: 5%;padding-bottom: 5%;">
+            S&Eacute; PARTE DE NUESTRO EQUIPO,<br>
+            D&Eacute;JANOS TUS DATOS
+        </p>
         <!--<div style="padding-top: 30px;">-->
             <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">SE PARTE DE NUESTRO EQUIPO,</div>-->
             <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important; font-size: 3rem; font-weight: 100; padding-left: 5%; line-height: 1.5;">D&Eacute;JANOS TUS DATOS</div>-->

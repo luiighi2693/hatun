@@ -2873,8 +2873,18 @@ footer ul a:visited {
   font-family: DIN-light, serif;
 }
 
+.hatunFontCustom{
+  /*color: #fcdc00 !important;*/
+  font-family: DIN-light, serif;
+}
+
 .hatunFont2{
   color: #fcdc00 !important;
+  font-family: Berthold-Akzidenz-Grotesk, serif;
+}
+
+.hatunFont2Custom{
+  /*color: #fcdc00 !important;*/
   font-family: Berthold-Akzidenz-Grotesk, serif;
 }
 
@@ -2962,6 +2972,13 @@ video {
   background-size: 100% 100%;
 }
 
+.hatunsolSectionMobile {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/hatunsol_1_resp.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
 .hatuncasaSection {
   width: 100%;
   height: 100%;
@@ -2969,10 +2986,24 @@ video {
   background-size: 100% 100%;
 }
 
+.hatuncasaSectionMobile {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/hatuncasa_1_resp.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
 .hatunmotoSection {
   width: 100%;
   height: 100%;
   background: url("../images/hatun/hatun_moto2.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.hatunmotoSectionMobile {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/hatunmoto_1_resp.jpg") no-repeat center;
   background-size: 100% 100%;
 }
 
@@ -2990,10 +3021,24 @@ video {
   background-size: 100% 100%;
 }
 
+.creditosMobile {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/creditos_1.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
 .tracking {
   width: 100%;
   height: 100%;
   background: url("../images/hatun/creditos_4Fixed.jpg") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.trackingMobile {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hatun/creditos_2.jpg") no-repeat center;
   background-size: 100% 100%;
 }
 
@@ -3048,11 +3093,19 @@ video {
   line-height: 1 !important;
   font-size: 1.5rem !important;
   padding-left: 10%;
-  padding-top: 5%;
+  padding-top: 5%
 }
 
 .hatunDropDown:hover{
   color: #fff !important;
+}
+
+.hatunTextLeft {
+  width: 50%;
+}
+
+.hatunTextRight {
+  width: 50%;
 }
 
 @media (max-width: 768px) {
@@ -3061,5 +3114,47 @@ video {
   }
   .hatunCasaFontTitle2 {
     font-size: 3.5rem;
+  }
+
+  /*.hatunTextLeft {*/
+    /*width: 100% !important;*/
+  /*}*/
+
+  /*.hatunTextRight {*/
+    /*width: 100% !important;*/
+    /*padding-left: 0;*/
+  /*}*/
+}
+
+@media (max-width: 998px) {
+  .hatunTextLeft {
+    width: 100% !important;
+  }
+
+  .hatunTextRight {
+    width: 100% !important;
+    padding-left: 0;
+  }
+
+  .hatunFrame{
+    display: block !important;
+  }
+
+  .hatunTextRightFont1 {
+    font-size: 3rem !important;
+  }
+
+  .hatunTextRightFont2 {
+    font-size: 3.5rem !important;
+    padding-left: 5% !important;
+  }
+
+  .hatunTextRightFont22 {
+    font-size: 6rem !important;
+    padding-left: 5% !important;
+  }
+
+  .hatunTextRightICon {
+    margin-top: 0 !important;
   }
 }

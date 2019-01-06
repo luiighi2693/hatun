@@ -125,11 +125,12 @@
 
                     $('#valoresImage')
                         // .width($(window).width().toString())
-                        .height( ( ($('#valoresImage').width() / 2500) *1080) + 170);
+                        .height( ( ($('#valoresImage').width() / 2500) *1080) + 120);
 
                     $('#blank').height(40);
 
                     $('#dropDownParentList').css('display', 'none');
+                    $('#footerExtraContent').css('display', 'none');
                     $('#creditMobile').css('display', 'inline-block');
                 } else {
                     $('img[usemap]').rwdImageMaps();
@@ -148,6 +149,7 @@
 
                     $('#blank').height(72);
                     $('#dropDownParentList').css('display', 'inline-block');
+                    $('#footerExtraContent').css('display', 'block');
                     $('#creditMobile').css('display', 'none');
                 }
 

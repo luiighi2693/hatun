@@ -40,11 +40,11 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
 
 <div id="headerComponent"></div>
 
-    <section id="blannk" style="height: 72px;">
+    <section id="blank" style="height: 72px;">
         this is a demo
     </section>
 
@@ -78,14 +78,83 @@
         </div>
     </section>
 
-    <section id="nosotros" style="background-color: black;">
-        <div style="display: flex;">
-            <img name="nosotrosImage" src="images/hatun/hatunsol_texto.jpg" width="2500" height="1080" border="0" id="nosotrosImage" usemap="#m_nosotrosImage" alt="" style="width: 100%; height: auto;"/>
-            <map name="m_nosotrosImage" id="m_nosotrosImage">
-                <area id="nosotrosArea" shape="poly" coords="125,858,417,857,417,923,128,921" title="Nosotros" alt="Nosotros" />
-            </map>
+<section id="hatunsolSectionMobile" class="hatunsolSectionMobile">
+</section>
+
+<section id="hatunsolFormMobile" style="background-color: black;">
+    <div style="padding-top: 30px;     display: flex;">
+        <div style="width: 1000%; padding-left: 10%;">
+            <div style="width:90%;     background-color: transparent; height: 105%;">
+                <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 2rem; text-align: center; padding-top: 5%; letter-spacing: 1px; padding-left: 0; color: white !important;">OBT&Eacute;N TU CR&Eacute;DITO YA!</div>
+                <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;     border-radius: 0;"/>
+                <input type="email" placeholder="EMAIL" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;     border-radius: 0;"/>
+                <input type="text" placeholder="CELULAR" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;     border-radius: 0;"/>
+                <input type="text" placeholder="OBRA" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;     border-radius: 0;"/>
+                <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0; font-weight: normal !important; line-height: 0.7;">Un asesor se comunicar&aacute; contigo</div>
+                <div class="hatunFont3 hatunCasaFontTitle" style="    font-size: 1.4rem; text-align: center; padding-left: 0; font-weight: normal !important;">lo antes posible</div>
+                <a href="#"><img src="images/hatun/hatunsolRegistraTusDatos.png" style="    width: 45%; text-align: center; padding-top: 4%; margin-left: auto; margin-right: auto; display: block;     padding-bottom: 30px;"/></a>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="nosotros">
+        <div class="hatunFrame" style="width: 100%; display: flex;">
+            <div class="hatunTextLeft" style="background-color: white; padding-top: 5%;padding-left: 5%; padding-bottom: 5%;">
+                <p class="hatunFont2Custom" style="color: #00a75f; font-size: 5rem;">OFRECEMOS</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Financiamos los materiales y a la mano</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">&nbsp;&nbsp;&nbsp;de obra sin cuota inicial.</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Llevamos los materiales de la obra.</p>
+
+                <p class="hatunFont2Custom" style="color: #00a75f; font-size: 5rem; padding-top: 5%;">REQUISITOS DEL CR&Eacute;DITO</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ DNI (Titular y C&Oacute;nyuge</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Recibo de luz o agua</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Sustento de ingresos</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Documento de casa</p>
+                <p class="hatunFontCustom" style="font-size: 2.5rem;">_ Lista de materiales de obra a construir</p>
+
+                <a href="#"><img src="images/hatun/hatunsolObtenTuCreditoYa.png" style="    width: 40%; text-align: center; padding-top: 4%; display: block;"/></a>
+            </div>
+            <div class="hatunTextRight" style="background-color: #00a75f;  padding-top: 5%; padding-left: 5%; padding-bottom: 5%; ">
+                <p class="hatunFont2Custom" style="color: white; font-size: 5rem;">CONT&Aacute;CTANOS</p>
+                <span style="display: flex;     padding-top: 5%;     padding-bottom: 4%;">
+                    <img src="images/hatun/whatsappIconBlack.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 7rem;margin-top: 4%;"/>
+                    <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 5rem; line-height: 1; color: black;padding-left: 1%;    padding-right: 1%;">
+                    CENTRAL<br>TELEF&Oacute;NICA</p>
+                    <p class="hatunFont2Custom hatunTextRightFont22" style="font-size: 9rem; line-height: 1; color: white;padding-left: 1%;">
+                    7013622</p>
+                </span>
+                <span style="display: flex;     padding-top: 5%;     padding-bottom: 4%;">
+                    <img src="images/hatun/emailIconBlack.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 5rem;"/>
+                    <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 5rem; line-height: 1; color: black;padding-left: 1%;    padding-right: 1%;     margin-top: 1.5%;">
+                    EMAIL</p>
+                    <p class="hatunFont2Custom hatunTextRightFont2" style="font-size: 3.5rem !important; line-height: 1; color: white;margin-top: 4%;padding-left: 20%;">
+                    info@hatunsol.com.pe</p>
+                </span>
+                <span style="display: flex;     padding-top: 5%;     padding-bottom: 4%;">
+                    <img src="images/hatun/clockIconBlack.png" class="hatunTextRightIcon" style="width: 4rem;text-align: center;display: block;height: 5rem;"/>
+                    <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 5rem; line-height: 1; color: black;padding-left: 1%;    padding-right: 1%;     margin-top: 1.5%;">
+                    ATENCI&Oacute;N</p>
+                    <p class="hatunFont2Custom hatunTextRightFont2" style="font-size: 3.5rem !important; line-height: 1; color: white;margin-top: 4%;padding-left: 9%;">
+                    Lunes a Viernes<br>de 9:00 am. a 6:00 pm.</p>
+                </span>
+                <span style="display: flex;     padding-top: 5%;     padding-bottom: 4%;">
+                    <img src="images/hatun/facebookIconBlack.png" style="width: 4rem;text-align: center;display: block;height: 5rem;"/>
+                </span>
+            </div>
         </div>
     </section>
+
+
+    <!--<section id="nosotros" style="background-color: black;">-->
+        <!--<div style="display: flex;">-->
+            <!--<img name="nosotrosImage" src="images/hatun/hatunsol_texto.jpg" width="2500" height="1080" border="0" id="nosotrosImage" usemap="#m_nosotrosImage" alt="" style="width: 100%; height: auto;"/>-->
+            <!--<map name="m_nosotrosImage" id="m_nosotrosImage">-->
+                <!--<area id="nosotrosArea" shape="poly" coords="125,858,417,857,417,923,128,921" title="Nosotros" alt="Nosotros" />-->
+            <!--</map>-->
+        <!--</div>-->
+    <!--</section>-->
 
     <div id="footerComponent"></div>
 
@@ -94,6 +163,41 @@
     <script src="js/util.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+        let isResize = false;
+
+        function checkIfResize() {
+            if (isResize) {
+
+                if (checkIfMobile()){
+                    console.log('mobile on');
+
+                    $('#blank').height(40);
+
+                    $('#dropDownParentList').css('display', 'none');
+                    $('#creditMobile').css('display', 'inline-block');
+                    $('#footerExtraContent').css('display', 'none');
+                    $('#hatunsolSection').css('display', 'none');
+                    $('#hatunsolSectionMobile').css('display', 'block');
+                    $('#hatunsolFormMobile').css('display', 'block');
+                } else {
+
+                    $('#blank').height(72);
+                    $('#dropDownParentList').css('display', 'inline-block');
+                    $('#creditMobile').css('display', 'none');
+
+                    $('#footerExtraContent').css('display', 'block');
+                    $('#hatunsolSection').css('display', 'block');
+                    $('#hatunsolSectionMobile').css('display', 'none');
+                    $('#hatunsolFormMobile').css('display', 'none');
+                }
+
+                isResize = false;
+            }
+        }
+
+        function resizeScreen() {
+            isResize = true;
+        }
 
         $(document).ready(function(e) {
             $('#headerComponent').load('components/header.html');
@@ -126,6 +230,9 @@
             });
 
             $('#hatunsolSection').height($('#hatunsolSection').height() - 72);
+
+            isResize = true;
+            setInterval(checkIfResize, 1000);
         });
 
     </script>

@@ -40,7 +40,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
 <div id="headerComponent"></div>
 
 <div id="mainContent">
@@ -60,14 +60,20 @@
         </div>
     </section>
 
-    <section id="testimonios" style="background-color: black;">
+    <section id="testimonios" style="background-color: white;">
         <div style="display: flex;">
-            <img name="testimoniosImage" src="images/hatun/testimonioHeader.jpg" width="1398" height="274" border="0" id="testimoniosImage" alt="" style="width: 100%; height: auto;"/>
+            <!--<img name="testimoniosImage" src="images/hatun/testimonioHeader.jpg" width="1398" height="274" border="0" id="testimoniosImage" alt="" style="width: 100%; height: auto;"/>-->
+            <p class="hatunFontCustom" style="width: 100%; height: auto; color: black !important; font-size: 3.5rem;line-height: initial;
+                    padding-top: 8%;padding-left: 5%;padding-bottom: 8%;">
+                MEJORAMOS LA CALIDAD DE VIDA<br>
+                A LAS FAMILIAS DE LOS<br>
+                SECTORES EMERGENTES
+            </p>
         </div>
         <div  style="    display: flex;     background-color: white;">
             <div style="width: 20%;"></div>
             <div style="width: 80%;">
-                <div style="width: 100%; display: flex;">
+                <div style="width: 100%; display: flex;" id="web1">
                     <div style="width: 50%;     padding-right: 10%;">
                         <video id="video1" controls style="height: 97%;">
                             <source src=videos/testimonio1.mp4 type=video/mp4>
@@ -77,8 +83,23 @@
                         <img id="image1" src="images/hatun/testimonial_1.jpg" style="height: auto;     width: 63%;">
                     </div>
                 </div>
+                <div style="width: 100%; display: flex;" id="mobile1">
+                    <div style="width: 100%;     padding-right: 10%;">
+                        <video id="video1Mobile" controls style="height: 97%;">
+                            <source src=videos/testimonio1.mp4 type=video/mp4>
+                        </video>
+                    </div>
+                </div>
                 <div style="width: 100%; margin-bottom: 5%;">
-                    <img src="images/hatun/testimonioTexto1.png" style="width: 40%;">
+                    <!--<img src="images/hatun/testimonioTexto1.png" style="width: 40%;">-->
+                    <p class="hatunFont3" style="font-size: 2.5rem; color: #000 !important;font-weight: bold; margin: 0;">MAR&Iacute;A GRACIELA P&Eacute;REZ CRUZADO</p>
+                    <p style="font-size: 1.5rem; color: #000 !important;">"Agradecerles por mi casita ya que termin&eacute; de construir"</p>
+                </div>
+
+                <div style="width: 100%; display: flex;     padding-bottom: 10%;" id="mobile1Image">
+                    <div style="width: 100%;">
+                        <img id="image1Mobile" src="images/hatun/testimonial_1.jpg" style="height: auto;     width: 63%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +107,7 @@
         <div  style="    display: flex;     background-color: white;">
             <div style="width: 20%;"></div>
             <div style="width: 80%;">
-                <div style="width: 100%; display: flex;">
+                <div style="width: 100%; display: flex;" id="web2">
                     <div style="width: 50%;     padding-right: 10%; ">
                         <video id="video2" controls style="height: 97%;">
                             <source src=videos/testimonio2.mp4 type=video/mp4>
@@ -96,8 +117,22 @@
                         <img id="image2" src="images/hatun/testimonial_2.jpg" style="height: auto;  width: 63%;">
                     </div>
                 </div>
+                <div style="width: 100%; display: flex;" id="mobile2">
+                    <div style="width: 100%;     padding-right: 10%;">
+                        <video id="video2Mobile" controls style="height: 97%;">
+                            <source src=videos/testimonio2.mp4 type=video/mp4>
+                        </video>
+                    </div>
+                </div>
                 <div style="width: 100%; margin-bottom: 5%;">
-                    <img src="images/hatun/testimonioTexto2.png" style="width: 57%;">
+                    <!--<img src="images/hatun/testimonioTexto2.png" style="width: 57%;">-->
+                    <p class="hatunFont3" style="font-size: 2.5rem; color: #000 !important;font-weight: bold; margin: 0;">MAGNA MARIA CANTARO MALQUI</p>
+                    <p style="font-size: 1.5rem; color: #000 !important;">"Agradezco a HatunSol... por haber cumplido mi sueño de construir mi casa propia"</p>
+                </div>
+                <div style="width: 100%; display: flex;     padding-bottom: 10%;" id="mobile2Image">
+                    <div style="width: 100%;">
+                        <img id="image2Mobile" src="images/hatun/testimonial_2.jpg" style="height: auto;     width: 63%;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,6 +146,69 @@
 <script src="js/util.js"></script>
 <script src="js/bootstrap.js"></script>
 <script>
+    let isResize = false;
+
+    function checkIfResize() {
+        if (isResize) {
+
+            resizeImages();
+
+            let images = ['brindamosImage'];
+
+            if (checkIfMobile()){
+                console.log('mobile on');
+
+                $('.home-scrolldown').css('display', 'none');
+
+                // images.push('valoresImage');
+                images.forEach(image => {
+                    $('#'+image+'')
+                        .height( ( ($('#'+image+'').width() / 2500) *1080));
+                });
+
+                $('#blank').height(40);
+
+                $('#dropDownParentList').css('display', 'none');
+                $('#creditMobile').css('display', 'inline-block');
+                $('#web1').css('display', 'none');
+                $('#web2').css('display', 'none');
+                $('#mobile1').css('display', 'block');
+                $('#mobile1Image').css('display', 'block');
+                $('#mobile2').css('display', 'block');
+                $('#mobile2Image').css('display', 'block');
+                $('#footerExtraContent').css('display', 'none');
+            } else {
+                $('img[usemap]').rwdImageMaps();
+
+                $('.home-scrolldown').css('display', 'block');
+
+                images.forEach(image => {
+                    $('#'+image+'')
+                        .width($(window).width().toString())
+                        .height(($(window).height()-72).toString());
+                });
+
+                $('#blank').height(72);
+                $('#dropDownParentList').css('display', 'inline-block');
+                $('#creditMobile').css('display', 'none');
+
+                $('#web1').css('display', 'flex');
+                $('#web2').css('display', 'flex');
+                $('#mobile1').css('display', 'none');
+                $('#mobile1Image').css('display', 'none');
+                $('#mobile2').css('display', 'none');
+                $('#mobile2Image').css('display', 'none');
+                $('#footerExtraContent').css('display', 'block');
+            }
+
+            isResize = false;
+        }
+    }
+
+    function resizeScreen() {
+        isResize = true;
+    }
+
     function resizeImages() {
         for (let i=0; i<3; i++) {
             $('#image1')
@@ -137,15 +235,10 @@
             goTo('testimonios');
         });
 
-        let images = ['brindamosImage'];
-
-        images.forEach(image => {
-            $('#'+image+'')
-                .width($(window).width().toString())
-                .height(($(window).height()-72).toString());
-        });
-
         setTimeout(resizeImages, 1500);
+
+        isResize = true;
+        setInterval(checkIfResize, 1000);
     });
 </script>
 
