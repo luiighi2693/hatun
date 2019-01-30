@@ -81,9 +81,13 @@
     <script>
         let isResize = false;
 
+        function checkIfMobileCustom() {
+            return $('html body').width() < $('html body').height();
+        }
+
         function checkIfResize() {
             if (isResize) {
-                if (checkIfMobile()){
+                if (checkIfMobileCustom()){
                     console.log('mobile on');
                     $('#blank').height(40);
                     $('#dropDownParentList').css('display', 'none');

@@ -40,7 +40,7 @@
 
 </head>
 
-<body id="top">
+<body id="top" onresize="resizeScreen()">
 
 <div id="headerComponent"></div>
 
@@ -140,6 +140,55 @@
 <script src="js/bootstrap.js"></script>
     <script>
 
+        let isResize = false;
+
+        function checkIfResize() {
+            if (isResize) {
+
+                if (checkIfMobile()){
+                    console.log('mobile on');
+
+                    $('.home-scrolldown').css('display', 'none');
+
+
+                    $('#blank').height(40);
+
+                    $('#dropDownParentList').css('display', 'none');
+                    $('#creditMobile').css('display', 'inline-block');
+                    $('#web1').css('display', 'none');
+                    $('#web2').css('display', 'none');
+                    $('#mobile1').css('display', 'block');
+                    $('#mobile1Image').css('display', 'block');
+                    $('#mobile2').css('display', 'block');
+                    $('#mobile2Image').css('display', 'block');
+                    $('#footerExtraContent').css('display', 'none');
+                } else {
+                    $('img[usemap]').rwdImageMaps();
+
+                    $('.home-scrolldown').css('display', 'block');
+
+
+                    $('#blank').height(72);
+                    $('#dropDownParentList').css('display', 'inline-block');
+                    $('#creditMobile').css('display', 'none');
+
+                    $('#web1').css('display', 'flex');
+                    $('#web2').css('display', 'flex');
+                    $('#mobile1').css('display', 'none');
+                    $('#mobile1Image').css('display', 'none');
+                    $('#mobile2').css('display', 'none');
+                    $('#mobile2Image').css('display', 'none');
+                    $('#footerExtraContent').css('display', 'block');
+                }
+
+                isResize = false;
+            }
+        }
+
+        function resizeScreen() {
+            isResize = true;
+        }
+
         $(document).ready(function(e) {
             $('#headerComponent').load('components/header.html');
             $('#footerComponent').load('components/footer.html');
@@ -161,6 +210,9 @@
                     .width($(window).width().toString())
                     .height($(window).height().toString() - 72);
             });
+
+            isResize = true;
+            setInterval(checkIfResize, 1000);
         });
 
     </script>

@@ -46,7 +46,11 @@
 
 <body id="top" onresize="resizeScreen()">
 <div style="position: absolute;width: 100%;height: 100%;">
-    <img id="imagePreview" src="images/hatun/intro_3.gif" style="height: auto; width: 100%">
+    <img id="imagePreview" src="images/hatun/intro_3.gif" width="2362" height="1417" border="0" alt="" style="height: auto; width: 100%">
+    <img id="imagePreviewResponsive" src="images/hatun/intro_responsive.gif" width="768" height="1024" border="0" usemap="#m_visionImage" alt="" style="height: auto; width: 100%">
+    <map name="m_visionImage" id="m_visionImage">
+        <area id="visionArea" shape="poly" coords="287,441,474,441,473,479,285,477" title="Mision" alt="Mision" />
+    </map>
 </div>
 <div class="hatunVideoButton">
     <button id="hideGiffButton" class="hatunFont" style="font-size: 1em; border: 1px solid; border-radius: 0; background-color: transparent;
@@ -62,10 +66,28 @@
 <script>
     let isResize = false;
 
+    function checkIfMobileCustom() {
+        return $('html body').width() < $('html body').height();
+    }
+
     function checkIfResize() {
         if (isResize) {
-            if ($('#imagePreview').height() < $('html body').height()) {
-                $('#imagePreview').css('height', '100%');
+            if (checkIfMobileCustom()) {
+                $('#imagePreview').css("display","none");
+                $('#imagePreviewResponsive').css("display","block");
+                $('#hideGiffButton').css("display","none");
+
+                if ($('#imagePreviewResponsive').height() < $('html body').height()) {
+                    $('#imagePreviewResponsive').css('height', '100%');
+                }
+            } else {
+                $('#imagePreview').css("display","block");
+                $('#imagePreviewResponsive').css("display","none");
+                $('#hideGiffButton').css("display","block");
+
+                if ($('#imagePreview').height() < $('html body').height()) {
+                    $('#imagePreview').css('height', '100%');
+                }
             }
 
             isResize = false;
@@ -78,6 +100,12 @@
 
     $(document).ready(function(e) {
         isResize = true;
+        $('img[usemap]').rwdImageMaps();
+
+        $('#visionArea').on('click', function() {
+            window.location = 'home.html'
+        });
+
         setInterval(checkIfResize, 1000);
     });
 
