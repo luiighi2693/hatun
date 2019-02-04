@@ -3159,3 +3159,52 @@ video {
     margin-top: 0 !important;
   }
 }
+
+.middleTextHome {
+  font-size: 8rem;
+}
+
+.middleTextDescription {
+  font-size: 1.5rem;
+}
+
+#aboutUsContentWeb {
+  display: block;
+}
+
+#aboutUsMobile {
+  display: block;
+}
+
+@media (max-width: 786px) {
+  #aboutUsMobile {
+    display: block;
+  }
+
+  #aboutUsContentWeb {
+    display: none;
+  }
+
+  .middleTextHome {
+    font-size: 4rem;
+  }
+
+}
+
+@media (min-width: 787px) {
+  #aboutUsMobile {
+    display: none;
+  }
+
+  #aboutUsContentWeb {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .row {
+    width: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
