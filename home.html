@@ -49,7 +49,7 @@
 <body id="top" onresize="resizeScreen()">
     <div id="headerComponent"></div>
 
-    <div id="mainContent">
+    <div id="mainContent" style="    overflow-x: hidden;">
         <section id="blank" style="height: 72px;">
             this is a demo
         </section>
@@ -101,22 +101,94 @@
         </section>
 
         <section id="mision" style="background-color: black;">
-            <div style="display: flex;">
-                <img name="misionImage" src="images/hatun/mision.jpg" width="2500" height="1080" border="0" id="misionImage" usemap="#m_misionImage" alt="" style="width: 100%; height: auto;"/>
-                <map name="m_misionImage" id="m_misionImage">
-                    <area id="misionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />
-                </map>
+            <div class="row" style="    width: 100%;max-width: 100%;margin: 0;">
+                <div class="single-portfolio col-sm-12 all raster" style="    padding: 0;">
+                    <div class="relative">
+                        <div class="thumb">
+                            <img name="misionImage" src="images/hatun/mision.jpg" width="2500" height="1080" border="0" id="misionImage" usemap="#m_misionImage" alt="" style="width: 100%; height: auto;"/>
+                            <map name="m_misionImage" id="m_misionImage">
+                                <area id="misionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />
+                            </map>
+                        </div>
+                        <div class="middle" style="width: 100%;">
+                            <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal; color: black;         width: 156%;">
+                                <h1 class="middleTextHome"><span style="font-weight: bold;">MISIÓN</span></h1>
+                            </div>
+                            <div id="misionContentWeb" class="text align-self-center d-flex hatunFontCustom" style="line-height: normal; color: black;     justify-content: flex-end;">
+                                <p class="middleTextDescription" style="    text-align: justify;width: 28%;float: right;margin-right: 5%;">Mejorar la economía y la calidad de vida de la familia, facilitándoles el acceso y continuidad en el sistema financiero a través de la obtención de un crédito.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="vision" style="background-color: black;">
-            <div style="display: flex;">
-                <img name="visionImage" src="images/hatun/vision.jpg" width="2500" height="1080" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>
-                <map name="m_visionImage" id="m_visionImage">
-                    <area id="visionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />
-                </map>
+        <section id="misionMobile" style="    background: white;color: black !important;">
+            <div style="padding-top: 30px;     display: flex;">
+                <div class="row" style="width: 100%;">
+                    <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal;">
+                        <p class="middleTextDescription" style="        text-align: justify; width: 100%;     color: black;">
+                            Mejorar la economía y la calidad de vida de la familia, facilitándoles el acceso y continuidad en el sistema financiero a través de la obtención de un crédito.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!--<section id="mision" style="background-color: black;">-->
+            <!--<div style="display: flex;">-->
+                <!--<img name="misionImage" src="images/hatun/mision.jpg" width="2500" height="1080" border="0" id="misionImage" usemap="#m_misionImage" alt="" style="width: 100%; height: auto;"/>-->
+                <!--<map name="m_misionImage" id="m_misionImage">-->
+                    <!--<area id="misionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />-->
+                <!--</map>-->
+            <!--</div>-->
+        <!--</section>-->
+
+        <section id="vision" style="background-color: black;">
+            <div class="row" style="    width: 100%;max-width: 100%;margin: 0;">
+                <div class="single-portfolio col-sm-12 all raster" style="    padding: 0;">
+                    <div class="relative">
+                        <div class="thumb">
+                            <img name="visionImage" src="images/hatun/vision.jpg" width="2500" height="1080" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>
+                            <map name="m_visionImage" id="m_visionImage">
+                                <area id="visionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />
+                            </map>
+                        </div>
+                        <div class="middle" style="width: 100%;">
+                            <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal; color: #fedc01;         width: 47%;">
+                                <h1 class="middleTextHome"><span style="font-weight: bold;">VISIÓN</span></h1>
+                            </div>
+                            <div id="visionContentWeb" class="text align-self-center d-flex hatunFontCustom" style="line-height: normal; color: white;     justify-content: flex-end;">
+                                <p class="middleTextDescription" style="    text-align: justify;width: 28%;    float: left;margin-left: 6%;">
+                                    Queremos ser el vínculo que motiva el cambio en la vida de las personas, colaborando con su realización personal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="visionMobile" style="    background: #fedc01;color: black !important;">
+            <div style="padding-top: 30px;     display: flex;">
+                <div class="row" style="width: 100%;">
+                    <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal;">
+                        <p class="middleTextDescription" style="        text-align: justify; width: 100%;     color: black;">
+                            Queremos ser el vínculo que motiva el cambio en la vida de las personas, colaborando con su realización personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--<section id="vision" style="background-color: black;">-->
+            <!--<div style="display: flex;">-->
+                <!--<img name="visionImage" src="images/hatun/vision.jpg" width="2500" height="1080" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>-->
+                <!--<map name="m_visionImage" id="m_visionImage">-->
+                    <!--<area id="visionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />-->
+                <!--</map>-->
+            <!--</div>-->
+        <!--</section>-->
 
         <section id="valores" style="background-color: black;">
             <div style="display: flex;">

@@ -3168,12 +3168,48 @@ video {
   display: block;
 }
 
+#misionContentWeb {
+  display: block;
+}
+
+#misionMobile {
+  display: block;
+}
+
+#visionContentWeb {
+  display: block;
+}
+
+#visionMobile {
+  display: block;
+}
+
 @media (max-width: 786px) {
   #aboutUsMobile {
     display: block;
   }
 
+  #misionMobile {
+    display: block;
+  }
+
+  #visionMobile {
+    display: block;
+  }
+
   #aboutUsContentWeb {
+    display: none;
+  }
+
+  .middleTextHome {
+    font-size: 4rem;
+  }
+
+  #misionContentWeb {
+    display: none;
+  }
+
+  #visionContentWeb {
     display: none;
   }
 
@@ -3188,7 +3224,23 @@ video {
     display: none;
   }
 
+  #misionMobile {
+    display: none;
+  }
+
+  #visionMobile {
+    display: none;
+  }
+
   #aboutUsContentWeb {
+    display: block;
+  }
+
+  #misionContentWeb {
+    display: block;
+  }
+
+  #visionContentWeb {
     display: block;
   }
 }
