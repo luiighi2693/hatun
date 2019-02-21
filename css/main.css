@@ -3292,3 +3292,96 @@ video {
   cursor: inherit;
   display: block;
 }
+
+.valoresTittle{
+  font-size: 6rem;
+}
+.valoresContent{
+  font-size: 3rem;
+  margin-left: -20%;
+}
+
+.beneficiosTittle{
+  font-size: 4rem;
+}
+.beneficiosContent{
+  font-size: 2rem;
+  /*margin-left: -20%;*/
+}
+
+@media (min-width: 769px) and (max-width: 1100px){
+  .valoresTittle{
+    font-size: 4rem;
+  }
+  .valoresContent{
+    font-size: 2.5rem;
+    margin-left: -10%;
+  }
+
+  .beneficiosTittle{
+    font-size: 3rem;
+  }
+  .beneficiosContent{
+    font-size: 1.5rem;
+    /*margin-left: -20%;*/
+  }
+}
+
+@media (min-width: 200px) and (max-width: 768px){
+  .valoresTittle{
+    font-size: 2rem;
+  }
+  .valoresContent{
+    font-size: 1.5rem;
+    margin-left: -10%;
+  }
+
+  .beneficiosContainer{
+    padding-top: 0;
+  }
+  .beneficiosTittle{
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .beneficiosContent{
+    font-size: 1.2rem;
+    /*margin-left: -20%;*/
+  }
+}
+
+.valoresWebContainer{
+  display: block;
+}
+
+.valoresMobileContainer{
+  display: none;
+}
+
+@media (min-width: 200px) and (max-width: 1375px){
+  .valoresWebContainer{
+    display: none;
+  }
+
+  .valoresMobileContainer{
+    display: block;
+  }
+}
+
+.arrowValoresCol{
+  display: block;
+}
+
+.arrowValoresColHidden{
+  display: none;
+}
+
+@media (min-width: 200px) and (max-width: 400px){
+  .arrowValoresCol{
+    display: none;
+  }
+
+  .arrowValoresColHidden{
+    display: block;
+  }
+}
