@@ -181,26 +181,15 @@
             </div>
         </section>
 
-        <!--<section id="vision" style="background-color: black;">-->
-            <!--<div style="display: flex;">-->
-                <!--<img name="visionImage" src="images/hatun/vision.jpg" width="2500" height="1080" border="0" id="visionImage" usemap="#m_visionImage" alt="" style="width: 100%; height: auto;"/>-->
-                <!--<map name="m_visionImage" id="m_visionImage">-->
-                    <!--<area id="visionArea" shape="poly" coords="1227,979,1271,977,1248,1028" title="Mision" alt="Mision" />-->
-                <!--</map>-->
-            <!--</div>-->
-        <!--</section>-->
-
         <section id="valores" style="background-color: black;">
-            <div class="row" style="    width: 100%;max-width: 100%;margin: 0;">
-                <div class="single-portfolio col-sm-12 all raster valoresWebContainer" style="    padding: 0;">
-                    <!--<img name="valoresImage" src="images/hatun/valores_beneficios.jpg" width="2500" height="1400" border="0" id="valoresImage" alt="" style="width: 100%; height: auto;"/>-->
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+            <div class="row valoresWebContainer" style="    width: 100%;max-width: 100%;margin: 0;">
+                    <div class="valoresWebContainerBox" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div id="beneficiosWeb" class="thumb" style="background-color: #231f20;     width: 100%;">
 
                             </div>
                             <div class="middle" style="width: 100%;">
-                                <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal; justify-content: center;">
+                                <div class="text align-self-center d-flex hatunFontCustom valoresWebContainerSubContainer" style="line-height: normal; justify-content: center;">
                                     <h1 class="valoresTittle" style="color: #fedc01;">
                                         <span style="font-weight: bold;">VALORES</span>
                                     </h1>
@@ -226,35 +215,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+                    <div class="" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div class="thumb">
                                 <img id="valores1" class="image img-fluid" src="images/hatun/valores/valores_1.jpg" width="1080" height="768" border="0" alt="" style="width: 100%; height: auto;">
                             </div>
                         </div>
                     </div>
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+                    <div class="" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div class="thumb">
                                 <img class="image img-fluid" src="images/hatun/valores/valores_2.jpg" width="1080" height="768" border="0" alt="" style="width: 100%; height: auto;">
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+            </div>
+            <div class="row valoresWebContainer" style="    width: 100%;max-width: 100%;margin: 0;">
+                    <div class="" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div class="thumb">
                                 <img class="image img-fluid" src="images/hatun/valores/valores_3.jpg" width="1080" height="768" border="0" alt="" style="width: 100%; height: auto;">
                             </div>
                         </div>
                     </div>
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+                    <div class="" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div id="valoresWeb" class="thumb" style="background-color: #fedc01;;     width: 100%;">
 
                             </div>
                             <div class="middle" style="width: 100%;">
-                                <div class="text align-self-center d-flex hatunFontCustom" style="line-height: normal;">
+                                <div class="text align-self-center d-flex hatunFontCustom beneficiosContainerBox" style="line-height: normal;">
                                     <h1 class="beneficiosTittle" style="color: white">
                                         <span style="font-weight: bold;">Beneficios</span>
                                     </h1>
@@ -296,7 +286,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0;">
+                    <div class="" style="    text-align: -webkit-center; padding: 0;     margin-bottom: 0; width: 33.33%">
                         <div class="relative">
                             <div class="thumb">
                                 <img class="image img-fluid" src="images/hatun/valores/valores_4.jpg" width="1080" height="768" border="0" alt="" style="width: 100%; height: auto;">
@@ -436,7 +426,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <!--</div>-->
         </section>
     </div>
 
@@ -479,6 +469,15 @@
                     $('#dropDownParentList').css('display', 'none');
                     $('#footerExtraContent').css('display', 'none');
                     $('#creditMobile').css('display', 'inline-block');
+                    
+                    if ($(window).width()<= 484) {
+                        if ($(window).height() > $(window).width()) {
+                            images.forEach(image => {
+                                $('#'+image+'')
+                                    .height( ( ($('#'+image+'').width() / 2500) *1080) + 100);
+                            });
+                        }
+                    }
                 } else {
                     $('img[usemap]').rwdImageMaps();
 

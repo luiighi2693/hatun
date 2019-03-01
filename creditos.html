@@ -158,8 +158,18 @@
                 $('#trackingFormMobile').css('display', 'block');
                 $('#trackingMobile').css('display', 'block');
 
-                $('#creditosMobile').css('height', '35%');
-                $('#trackingMobile').css('height', '35%');
+                // $('#creditosMobile').css('height', '35%');
+                // $('#trackingMobile').css('height', '35%');
+
+                if ($(window).height() > $(window).width()) {
+                    $('#creditosMobile').css('height', '50%');
+                    $('#trackingMobile').css('height', '50%');
+                } else {
+                    $('#creditosMobile')
+                        .height($(window).height().toString() - 40);
+                    $('#trackingMobile')
+                        .height($(window).height().toString() - 40);
+                }
             } else {
 
                 $('#blank').height(72);

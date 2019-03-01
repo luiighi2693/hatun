@@ -124,14 +124,14 @@
             <p class="hatunFont2Custom" style="color: white; font-size: 5rem;">CONT&Aacute;CTANOS</p>
 
             <div class="row" style="max-width: 100%;">
-                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: -webkit-center;">
+                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: left;">
                     <img src="images/hatun/whatsappIconWhite.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 5rem;margin-top: 4%;"/>
                 </div>
-                <div class="col-four col-xs-4 tab-full footer-info">
+                <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;    padding-right: 1%;">
                         CENTRAL<br>TELEF&Oacute;NICA</p>
                 </div>
-                <div class="col-six col-xs-6 tab-full footer-info">
+                <div class="col-six col-xs-6 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont22" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;">
                         Arequipa<br>
                         <span style="font-size: 3.5rem !important;">054&nbsp;&nbsp;324&nbsp;&nbsp;536</span><br>
@@ -143,42 +143,42 @@
             </div>
 
             <div class="row" style="max-width: 100%;    margin-top: 5%;">
-                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: -webkit-center;">
+                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: left;">
                     <img src="images/hatun/emailIconWhite.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 4rem;margin-top: 4%;"/>
                 </div>
-                <div class="col-four col-xs-4 tab-full footer-info">
+                <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;    padding-right: 1%; margin-top: 5%;">
                         EMAIL</p>
                 </div>
-                <div class="col-six col-xs-6 tab-full footer-info">
+                <div class="col-six col-xs-6 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont22" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;">
                         info@hatuncasa.com.pe</p>
                 </div>
             </div>
 
             <div class="row" style="max-width: 100%;    margin-top: 5%;">
-                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: -webkit-center;">
+                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: left;">
                     <img src="images/hatun/clockIconWhite.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 4rem;margin-top: 4%;"/>
                 </div>
-                <div class="col-four col-xs-4 tab-full footer-info">
+                <div class="col-four col-xs-4 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;    padding-right: 1%; margin-top: 5%;">
                         ATENCI&Oacute;N</p>
                 </div>
-                <div class="col-six col-xs-6 tab-full footer-info">
+                <div class="col-six col-xs-6 tab-full footer-info" style="    text-align: left;">
                     <p class="hatunFont2Custom hatunTextRightFont22" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;">
                         Lunes a Viernes<br>de 9:00 am. a 6:00 pm.</p>
                 </div>
             </div>
 
             <div class="row" style="max-width: 100%;    margin-top: 5%;">
-                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: -webkit-center;">
+                <div class="col-two col-xs-2 tab-full footer-info" style="    text-align: left;">
                     <img src="images/hatun/facebookIconWhite.png" class="hatunTextRightICon" style="width: 4rem;text-align: center;display: block;height: 4rem;margin-top: 4%;"/>
                 </div>
-                <div class="col-four col-xs-10 tab-full footer-info">
-                    <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 3rem; line-height: 1; color: black;padding-left: 1%;    padding-right: 1%; margin-top: 5%;">
+                <div class="col-four col-xs-10 tab-full footer-info" style="    text-align: left;">
+                    <p class="hatunFont2Custom hatunTextRightFont1" style="font-size: 3rem; line-height: 1; color: white;padding-left: 1%;    padding-right: 1%; margin-top: 2%;">
                         @hatuncasa.oficial</p>
                 </div>
-                <!--<div class="col-six col-xs-6 tab-full footer-info">-->
+                <!--<div class="col-six col-xs-6 tab-full footer-info" style="    text-align: left;">-->
                 <!--</div>-->
             </div>
         </div>
@@ -219,7 +219,14 @@
                     $('#hatuncasaSectionMobile').css('display', 'block');
                     $('#hatuncasaFormMobile').css('display', 'block');
 
-                    $('#hatuncasaSectionMobile').css('height', '35%');
+                    // $('#hatuncasaSectionMobile').css('height', '35%');
+
+                    if ($(window).height() > $(window).width()) {
+                        $('#hatuncasaSectionMobile').css('height', '50%');
+                    } else {
+                        $('#hatuncasaSectionMobile')
+                            .height($(window).height().toString() - 40);
+                    }
                 } else {
 
                     $('#blank').height(72);

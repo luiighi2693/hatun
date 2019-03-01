@@ -3351,20 +3351,54 @@ video {
 }
 
 .valoresWebContainer{
-  display: block;
+  display: flex;
 }
 
 .valoresMobileContainer{
   display: none;
 }
 
-@media (min-width: 200px) and (max-width: 1375px){
+/*@media (min-width: 200px) and (max-width: 1375px){*/
+@media (min-width: 200px) and (max-width: 768px){
   .valoresWebContainer{
     display: none;
   }
 
   .valoresMobileContainer{
     display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1375px){
+  .valoresContent{
+    margin-top: 0;
+  }
+
+  .valoresWebContainerSubContainer{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  /*.valoresWebContainerBox{*/
+    /*height: max-content;*/
+  /*}*/
+
+  .valoresTittle {
+    font-size: 3rem;
+  }
+
+  .valoresContent {
+    font-size: 1.5rem;
+    margin-left: -10%;
+  }
+
+  .beneficiosContent {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .beneficiosContainerBox{
+    padding: 0;
   }
 }
 
@@ -3383,5 +3417,11 @@ video {
 
   .arrowValoresColHidden{
     display: block;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 559px){
+  .hatunFontCustom {
+    font-size: 1.5rem !important;
   }
 }
