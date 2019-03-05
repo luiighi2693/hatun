@@ -3425,3 +3425,22 @@ video {
     font-size: 1.5rem !important;
   }
 }
+
+@media (min-width: 200px) and (max-width: 997px){
+  .emailMarksCustom {
+    margin-top: 1% !important;
+  }
+  .atentionMarksCustom {
+    margin-top: 2% !important;
+  }
+}
+
+.footerExtraContentLogo {
+  display: block;
+}
+
+@media (min-width: 769px){
+  .footerExtraContentLogo {
+    display: none; !important;
+  }
+}
