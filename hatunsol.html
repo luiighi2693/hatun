@@ -217,8 +217,10 @@
                     $('#hatunsolFormMobile').css('display', 'block');
 
                     if ($(window).height() > $(window).width()) {
+                        $('#hatunsolSectionMobile').css("background-image","url('../images/hatun/hatunsol_1_resp.jpg')");
                         $('#hatunsolSectionMobile').css('height', '50%');
                     } else {
+                        $('#hatunsolSectionMobile').css("background-image","url('../images/hatun/responsive_texto/hatunsol_texto.jpg')");
                         $('#hatunsolSectionMobile')
                             .height($(window).height().toString() - 40);
                     }
