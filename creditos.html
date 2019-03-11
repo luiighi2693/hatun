@@ -102,9 +102,9 @@
                 <!--<div class="hatunFont hatunCasaFontTitle2" style="color: black !important;     font-size: 3rem; font-weight: normal; line-height: 0.7;">S&Iacute;GUELO PASO A PASO</div>-->
             </div>
             <div style="width: 50%; padding-left: 10%;     margin-top: 15%;">
-                <div style="width:70%;     background-color: #fef5b2; height: 115%; border-radius: 15px;">
+                <div style="width:70%;      height: 115%; border-radius: 15px;">
                     <div class="hatunFont2 hatunCasaFontTitle" style="    font-size: 0rem; text-align: center; padding-top: 5%; letter-spacing: 1px; padding-left: 0;"></div>
-                    <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;"/>
+                    <input type="text" placeholder="DNI" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 5%;     border: 1px solid;border-radius: 0;"/>
                     <!--<input type="text" placeholder="OBRA" style="    background-color: white; width: 80%; margin-left: 10%; height: 4rem;     margin-bottom: 1rem; margin-top: 2%;"/>-->
                     <a href="#"><img src="images/hatun/ingresar.png" style="    width: 50%; height: 30%; text-align: center; padding-top: 4%; margin-left: auto; margin-right: auto; display: block;"/></a>
                 </div>
@@ -162,12 +162,19 @@
                 // $('#trackingMobile').css('height', '35%');
 
                 if ($(window).height() > $(window).width()) {
-                    $('#creditosMobile').css('height', '50%');
+                    // $('#creditosMobile').css('height', '50%');
                     $('#trackingMobile').css('height', '50%');
+
+                    $('#creditosMobile').css("background-image","url('../images/hatun/creditos_1.jpg')");
+                    $('#creditosMobile').css('height', '50%');
                 } else {
-                    $('#creditosMobile')
-                        .height($(window).height().toString() - 40);
+                    // $('#creditosMobile')
+                    //     .height($(window).height().toString() - 40);
                     $('#trackingMobile')
+                        .height($(window).height().toString() - 40);
+
+                    $('#creditosMobile').css("background-image","url('../images/hatun/te_ayudamos_texto.jpg')");
+                    $('#creditosMobile')
                         .height($(window).height().toString() - 40);
                 }
             } else {

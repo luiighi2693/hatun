@@ -2908,6 +2908,10 @@ footer ul a:visited {
   font-family: JennaSue, serif;
 }
 
+.hatunFontQuienesSomos{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
 .hatunFontSize{
   font-size: 9em;
 }
@@ -3036,7 +3040,9 @@ video {
 .tracking {
   width: 100%;
   height: 100%;
-  background: url("../images/hatun/creditos_4Fixed.jpg") no-repeat center;
+  background: url("../images/hatun/credito_laptop.jpg") no-repeat center;
+  /*background: url("../images/hatun/creditos_4Fixed.jpg") no-repeat center;*/
+  /*background-color: #fddb00;*/
   background-size: 100% 100%;
 }
 
@@ -3436,6 +3442,12 @@ video {
   }
   .atentionMarksCustom {
     margin-top: 2% !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1315px){
+  .footerContactUs {
+    font-size: 2rem !important;
   }
 }
 
