@@ -3402,13 +3402,27 @@ video {
     margin-left: -10%;
   }
 
+  /*.beneficiosContent {*/
+    /*font-size: 1.8rem;*/
+    /*margin: 0;*/
+  /*}*/
+
+  .beneficiosContainerBox{
+    padding: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1074px){
   .beneficiosContent {
     font-size: 1.2rem;
     margin: 0;
   }
+}
 
-  .beneficiosContainerBox{
-    padding: 0;
+@media (min-width: 1075px) and (max-width: 1375px){
+  .beneficiosContent {
+    font-size: 1.8rem;
+    margin: 0;
   }
 }
 
