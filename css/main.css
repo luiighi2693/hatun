@@ -3355,7 +3355,7 @@ video {
     margin-top: 0;
   }
   .beneficiosContent{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     /*margin-left: -20%;*/
   }
 }
@@ -3481,3 +3481,13 @@ video {
   }
 }
 
+.footerSpacingCustom {
+  margin-top: 0;
+}
+
+
+@media (max-height: 339px){
+  .footerSpacingCustom {
+    margin-top: 5rem;
+  }
+}
