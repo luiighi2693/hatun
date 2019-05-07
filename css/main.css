@@ -3440,13 +3440,23 @@ video {
   }
 
   .arrowValoresColHidden{
-    display: block;
+    display: flex !important;
   }
 }
 
 @media (min-width: 200px) and (max-width: 559px){
   .hatunFontCustom {
     font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 450px){
+  .valoresFontSizeCustom {
+    font-size: 1.2rem !important;
+  }
+
+  .textCustom {
+    padding: 16px 0 !important;
   }
 }
 
@@ -3489,5 +3499,41 @@ video {
 @media (max-height: 339px){
   .footerSpacingCustom {
     margin-top: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  #valoresMobile2-1{
+    display: none !important;
+  }
+  #valoresMobile2-2{
+    display: block !important;
+  }
+  #valoresMobile3-11{
+    display: none !important;
+  }
+  #valoresMobile3-12{
+    display: none !important;
+  }
+  #valoresMobile3-21{
+    display: block !important;
+  }
+}
+
+@media (min-width: 401px) {
+  #valoresMobile2-1{
+    display: block !important;
+  }
+  #valoresMobile2-2 {
+    display: none !important;
+  }
+  #valoresMobile3-11{
+    display: block !important;
+  }
+  #valoresMobile3-12{
+    display: block !important;
+  }
+  #valoresMobile3-21{
+    display: none !important;
   }
 }

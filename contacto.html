@@ -112,20 +112,20 @@
             <div style="width:30%; line-height: 1; padding-top: 15%;">
             </div>
             <div style="width: 70%; padding-right: 10%">
-                <form id="myForm" method="post" action="mail2.php">
-                    <input type="text" placeholder="NOMBRE Y APELLIDOS" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0;"/>
+                <form id="myForm" method="post" action="mail2.php" enctype='multipart/form-data'>
+                    <input type="text" id="name" name="name" placeholder="NOMBRE Y APELLIDOS" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0;"/>
                     <div style="display: flex;">
-                        <input type="text" placeholder="DNI" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
-                        <input type="text" placeholder="CELULAR" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
+                        <input type="text" id="dni" name="dni" placeholder="DNI" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                        <input type="text" id="cellphone" name="cellphone" placeholder="CELULAR" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
                     </div>
-                    <input type="text" placeholder="DIRECCIÓN" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                    <input type="text" id="address" name="address" placeholder="DIRECCIÓN" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
                     <div style="display: flex;">
-                        <input type="text" placeholder="DISTRITO" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
-                        <input type="text" placeholder="E-MAIL" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
+                        <input type="text" id="site" name="site" placeholder="DISTRITO" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                        <input type="text" id="email" name="email" placeholder="E-MAIL" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
                     </div>
 
                     <span class="btn btn-default btn-file" style="    width: 47%;border-radius: 0;border-color: black;     margin-top: 3%;margin-bottom: 5%;">
-                    <span style="    float: left;">ADJUNTA TU CV</span><input type="file">
+                    <span style="    float: left;">ADJUNTA TU CV</span><input id="file" name="file" type="file">
                 </span>
 
                     <!--<input type="text" placeholder="ADJUNTA TU CV" style="    background-color: white; width: 47%; height: 4rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-bottom: 5%;"/>-->
@@ -237,18 +237,24 @@
         function validateForm() {
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-            // if (!re.test($('#email')[0].value)) {
-            //     return false;
-            // }
-            // if (($('#name')[0].value).length == 0) {
-            //     return false
-            // }
-            // if (($('#subject')[0].value).length == 0) {
-            //     return false
-            // }
-            // if (($('#cellphone')[0].value).length == 0) {
-            //     return false
-            // }
+            if (!re.test($('#email')[0].value)) {
+                return false;
+            }
+            if (($('#name')[0].value).length === 0) {
+                return false
+            }
+            if (($('#dni')[0].value).length === 0) {
+                return false
+            }
+            if (($('#cellphone')[0].value).length === 0) {
+                return false
+            }
+            if (($('#address')[0].value).length === 0) {
+                return false
+            }
+            if (($('#site')[0].value).length === 0) {
+                return false
+            }
             return true;
         }
 
