@@ -112,10 +112,10 @@
             </div>
             <div style="width: 70%; padding-right: 10%">
                 <form id="myForm" method="post" action="mail2.php" enctype='multipart/form-data'>
-                    <input type="text" id="name" name="name" placeholder="NOMBRE Y APELLIDOS" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0;"/>
+                    <input type="text" id="name" name="name" placeholder="NOMBRE Y APELLIDOS" maxlength="20" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0;"/>
                     <div style="display: flex;">
-                        <input type="text" id="dni" name="dni" placeholder="DNI" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
-                        <input type="text" id="cellphone" name="cellphone" placeholder="CELULAR" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
+                        <input type="text" maxlength="8" id="dni" name="dni" placeholder="DNI" onkeypress="return isNumber(event)" style="    background-color: white; width: 47%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
+                        <input type="text" maxlength="9" id="cellphone" name="cellphone" placeholder="CELULAR" onkeypress="return isNumber(event)" style="    background-color: white; width: 48%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%; margin-left: 5%;"/>
                     </div>
                     <input type="text" id="address" name="address" placeholder="DIRECCIÓN" style="    background-color: white; width: 100%; height: 4rem; margin-bottom: 1rem; border: 1px solid; border-radius: 0; margin-top: 3%;"/>
                     <div style="display: flex;">
@@ -257,6 +257,13 @@
             return true;
         }
 
+        function isNumber(evt) {
+            var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+            if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+                return false;
+
+            return true;
+        }
 
     </script>
 </body>
