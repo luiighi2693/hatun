@@ -33,24 +33,32 @@ try {
     $email = $_POST['email'];
     $cellphone = $_POST['cellphone'];
     $address = $_POST['address'];
-    $messaje = $_POST['messaje'];
+    // $messaje = $_POST['messaje'];
     $site = $_POST['site'];
     $dni = $_POST['dni'];
+
 
     $body = 'Nombre: '.$name."\n\n<br>
             DNI: ".$dni."\n\n<br>
             Correo: ".$email."\n\n<br>
             Celular: ".$cellphone."\n\n<br>
             Direccion: ".$address."\n\n<br>
-            Distrito: ".$site."\n\n<br>
-            Mensaje: ".$messaje;
+            Distrito: ".$site;
+
+
+    echo $body;
 
     //Recipients
     $mail->setFrom('sic@hatunsol.com.pe', 'Mailer');
     $mail->addAddress('rrhh@hatunsol.com.pe', 'RRHH');     // Add a recipient
-//    $mail->addAddress('luiscarvajal2693@gmail.com', 'Joe User');     // Add a recipient
+    // $mail->addAddress('luiscarvajal2693@gmail.com', 'Joe User');     // Add a recipient
 
-    $mail->AddAttachment($_FILES['uploaded_file']['tmp_name'], $_FILES['uploaded_file']['name']);
+    try {
+        $mail->AddAttachment($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+    } catch (Exception $e) {
+        echo "NO FILE: {$mail->ErrorInfo}";
+    }
+
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
@@ -58,13 +66,16 @@ try {
     $mail->Body    = $body;
     $mail->AltBody = $body;
 
+    //   $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
     $mail->send();
-//    echo 'Message has been sent';
+    echo 'Message has been sent';
 
     header("Location: home.html");
     die();
 } catch (Exception $e) {
-//    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     header("Location: home.html");
     die();
 }
